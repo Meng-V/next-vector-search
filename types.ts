@@ -1,9 +1,8 @@
 import { GenerativeReturn } from "weaviate-client"
 
 export type Wiki = {
-  title: string,
-  url: string,
-  text: string
+  question: string,
+  answer: string
 }
 
 

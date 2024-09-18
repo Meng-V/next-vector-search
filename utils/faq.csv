@@ -1,0 +1,1858 @@
+﻿question,answer
+"What is the difference between factors, factor levels, and treatments?","Factor is another way of referring to a categorical variable <https://libanswers.lib.miamioh.edu/stats-faq/faq/336907/?m=p>. Factor levels are all of the values that the factor can take (recall that a categorical variable has a set number of groups). In a designed experiment, the treatments represent each combination of factor levels. If there is only one factor with k levels, then there would be k treatments. However, if there is more than one factor, then the number of treatments can be found by multiplying the number of levels for each factor together.
+
+For example, say you have two factors, exercise type and post-exercise snack. Exercise type has four levels (running, swimming, weightlifting, kickboxing) and snack has three levels (banana, granola bar, protein shake). If we multiply 4 by 3, we get 12 treatments, which can be represented as follows:"
+What are the advantages of the normal distribution?,"The first advantage of the normal distribution is that it is symmetric and bell-shaped. This shape is useful because it can be used to describe many populations, from classroom grades to heights and weights. The normal distribution (and related distributions) are also the easiest to use of the bell-shaped distributions. The standard normal density curve (with mean = 0 and standard deviation = 1) is pictured below.[Image: The plot below shows the distribution of the standard normal distribution. It is symmetric and unimodal, with a center at zero.]
+
+The other main advantage of the normal distribution is the Central Limit Theorem. This theorem states that when the sample size is very large, the sample mean will generally follow a normal distribution even if the original population is not normally distributed. This means that we can often use inferential statistical methods that assume normality, even if the data in our sample doesn’t follow a normal distribution.
+
+R Code for Graph:
+
+x <- rnorm(10000000)
+
+ggplot(data.frame(x=x)) + geom_density(aes(x=x)) + scale_x_continuous(breaks = c(-3,-2,-1,0,1,2,3), limits = c(-4,4)) + theme_bw()"
+What is the difference between uncorrelation and independence?,"Uncorrelation means that there is no linear dependence between the two random variables, while independence means that no types of dependence exist between the two random variables. For example, in the figure below \(Y_1\) and \(Y_2\) are uncorrelated (no linear relationship) but not independent.
+
+[Image: The plot below shows graphically what uncorrelation (lack of linear dependence) but there still being some sort of dependence. The plot shows a parabolic curve that signifies some sort of quadratic dependence, however, if you were to fit a linear line to this plot it would be a flat horizontal line signifying no correlation.]
+
+This means that independent random variables are always uncorrelated, but uncorrelated random variables may not be independent. In other words, independence is a stronger statement than uncorrelation."
+How do I identify variables as numeric (quantitative) or categorical (qualitative)?," A categorical variable is a variable with a set number of groups (gender, colors of the rainbow, brands of cereal), while a numeric variable is generally something that can be measured (height, weight, miles per hour). It is easy to identify categorical variables when the groups are specified with words, because you can’t perform mathematical operations on a word. However, if the variable is represented numerically, it is important to consider the characteristics of the variable instead of automatically assuming it’s numeric.
+
+Here are some criteria to consider:
+-
+Do the numbers represent categories? For example, gender is often coded with “0” and “1” in a dataset, but it’s still a categorical variable.
+
+-
+Is there a set number of possible values the variable could take? For example, the variable “number of car doors” will probably only have the values of “2” or “4”. In this case, the variable is categorical.
+
+-
+Is the variable measured on a continuous scale (another way of thinking about this is can it be measured)? Variables like height and weight are good examples of numeric predictors that meet this criterion."
+What is the difference between continuous and discrete random variables?,"Discrete and continuous random variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/343626?m=p> have different ranges. The range of a discrete distribution is countable, while the range of a continuous variable is not. However, countable is not the same as finite. For example, in an experiment where the random variable is defined as the number of coin flips until the first head, the range is infinite but still countable.
+
+A less mathematical way to describe the difference is to say that discrete random variables are used for counting, and continuous random variables are used for measuring. Discrete random variables are used for experiments such as flipping a coin or rolling a six-sided die, while continuous random variables can be used to describe variables like weight or income.
+
+Mathematically, it’s important to remember that summation is used to find a range of probabilities for discrete random variables and integration is used for continuous random variables."
+"What are the differences between nominal, ordinal, interval, and ratio data types?","Nominal and ratio data types are both used to describe categorical variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/342540?m=p>. The difference between the two data types is that ordinal data has ordered categories (class rank, socioeconomic status, Likert scales, etc.), and nominal data (gender, ethnicity, etc.) does not.
+
+Interval and ratio data types are both used to describe numeric variables. The key difference is that ratio data has a “true zero”. In other words, a value of zero signifies that the variable you’re describing doesn’t exist. Weight is an example of ratio data because if an object weighs zero pounds, it is weightless. Temperature in degrees Fahrenheit is an example of interval data because a temperature of zero degrees just means it’s really cold, not that the temperature doesn’t exist. 
+
+Evaluate the data type using the following tree diagram: 
+
+ 
+
+
+[Image: The tree diagram helps us decipher what kind data types we are working with. If the data is categorical, you can ask yourself whether the order matters. If it does, then it is ordinal, if it does not, then it is nominal. If the data is numeric, you can ask yourself whether the value of 0 means the quantity does not exist. If it does mean this, then you are dealing with a ratio data type, if it does not, then you are dealing with an interval data type.]
+
+
+
+
+
+ "
+How do I access the Libraries' subscription to the Wall Street Journal?,"Current faculty, staff, and students can activate their Miami University Libraries-sponsored Wall Street Journal account from any location on or off campus:
+-Go to the WSJ registration page at https://partner.wsj.com/partner/miamiuniversity.
+-Enter first and last name
+-Select an Account Type from the dropdown: Student, Professor, or Staff
+-Enter your email address and create a password. The email address and password will allow access on other devices outside of the university network.
+-Click Create to complete registration and create your WSJ subscription.
+-Once you have an account you can go directly to: https://www.wsj.com/
+
+
+NOTE: Student accounts stay active until graduation date. Faculty and staff will be prompted to validate their memberships once a year with an email notification and a banner on the WSJ home page. 
+
+If a user already has a personal WSJ subscription, it cannot be integrated into the university site license. Users with personal subscriptions should choose a different email address to register with via the university license or cancel their personal subscription before registering through the university license."
+How do I identify variables as numeric (quantitative) or categorical (qualitative)?,"A categorical variable is a variable with a set number of groups (gender, colors of the rainbow, brands of cereal), while a numeric variable is generally something that can be measured (height, weight, miles per hour). It is easy to identify categorical variables when the groups are specified with words, because you can’t perform mathematical operations on a word. However, if the variable is represented numerically, it is important to consider the characteristics of the variable instead of automatically assuming it’s numeric.
+
+Here are some criteria to consider:
+-Do the numbers represent categories? For example, gender is often coded with “0” and “1” in a dataset, but it’s still a categorical variable. 
+-Is there a set number of possible values the variable could take? For example, the variable “number of car doors” will probably only have the values of “2” or “4”. In this case, the variable is categorical.
+-Is the variable measured on a continuous scale (another way of thinking about this is can it be measured)? Variables like height and weight are good examples of numeric predictors that meet this criterion."
+How do I find the front page of the New York Times for the day I was born?,"You can get the front page of the NYT for your birth date by using the New York Times Historical database from ProQuest.
+-Go to Databases A-Z <http://www.lib.miamioh.edu/databases>.
+-Find and click on New York Times Historical <http://www.lib.miamioh.edu/indexes/redirect/791>.
+-Under ""Publication date"", choose ""On this date"".
+-Choose the month, day and year of your birthday from the dropdown boxes.
+-Under ""More Search Options"", ""Document type"", choose ""Front page article"".
+-Click ""Search"".
+-Open any article that appears in the search results.
+-Click the ""Page view - PDF"" tab.
+-Download the PDF using ""Download Page PDF"" link on the right."
+How do I get access to the Washington Post online?,"As of December 31, 2017, the Washington Post no longer offers free access to the digital newspaper for those who have an ""edu"" e-mail address.
+
+If you have a .gov or .mil email address, you are still eligible for a free subscription to the Washington Post online <https://helpcenter.washingtonpost.com/hc/en-us/articles/115007248227-Start-a-free-subscription-with-a-valid-gov-or-mil-email-address> (National Digital + D.C. Edition).
+
+Active K-12 educators and full-time and part-time US college students, graduate students, faculty, and staff are eligible for the Washington Post academic rate, available at https://subscribe.washingtonpost.com/acqlite/edu-offer/.
+
+ "
+How do I format my Miami University thesis or dissertation?,"Before students begin writing, they should review the Guide for Writing Theses and Dissertations, which details mechanics, formats, and procedures for preparing the thesis, dissertation, internship, or practicum report. These guidelines are established by the Graduate School and are available by contacting gradschool@miamioh.edu <mailto:gradschool@miamioh.edu> or visiting the Graduate Student Association Canvas site <https://miamioh.instructure.com/courses/16683>.
+
+Master's Thesis
+
+Use the format and style used by leading professional journals or style sheets in your discipline or professional field. You must also meet the Graduate School and OhioLINK format requirements.
+
+All students submitting a thesis or dissertation must deposit it electronically at OhioLINK. Before beginning to write, you should email the Graduate School at gradschool@miamioh.edu <mailto:gradschool@miamioh.edu> for the template and instructions for mechanics and procedures from the Graduate School. Your thesis must be electronically deposited at OhioLINK at least 14 working days before commencement, or as determined by the Graduate School. The only paper submitted to the Graduate School by the student will be the original signature/title page on plain white copy paper.
+
+Doctoral Dissertation
+Before beginning to write, you should obtain a template and instructions for mechanics and procedures from the Graduate School. Generally, format and style used by leading professional journals in your field or A Manual for Writers (Kate L. Turabian) serves as a guide. Check your writing format early with the Graduate School to avoid any delay. A final format check and approval by the Graduate School are required before your dissertation is accepted and electronically deposited.
+
+All students submitting a dissertation must deposit it electronically. Your dissertation must be electronically deposited at OhioLINK at least 21 working days before commencement or as determined by the Graduate School. The only paper submitted to the Graduate School by the student will be the original Certificate page (with original committee signatures) which is the first page of the dissertation."
+How do I access electronic resources from off-campus?,"In order to access library subscribed electronic resources from off campus, you must be a current student, faculty or staff member.
+
+-Students who are taking/auditing a course/courses: but are not enrolled in a degree program will NOT have access to e-resources off campus until the semester of their course officially begins. 
+-Institute for Higher Learning students: do not automatically have access to Library e-resources from off campus. If you are enrolled in the institute and need off campus access to e-resources for your coursework, please contact the Institute (run by Global Initiatives); they must ask the registrar to change your status to that of a graduate student. This is done on a case by case basis and the Libraries cannot request this change on behalf of a student. 
+-Project Dragonfly students: please go to http://libanswers.lib.miamioh.edu/faq/193674 for information specific to your program.
+-Visiting scholars: please go to http://libanswers.lib.miamioh.edu/faq/177910 for information specific to your status.
+-MU Alumni: please go to http://libanswers.lib.miamioh.edu/faq/163330 for information specific to your status.
+
+------------------
+
+​E-Resource Access for Non-Students
+
+Please note that Alumni <http://libanswers.lib.miamioh.edu/faq/163330> and Affiliated Patrons <http://libanswers.lib.miamioh.edu/faq/168047> DO NOT have access to any library e-resources (including Books and More and Articles and More) unless they are on site as a walk-in user. 
+
+Non-Miami students <http://libanswers.lib.miamioh.edu/faq/177904> and community members can use the Miami University Libraries on a walk-in basis during University business hours (M-F, 8 am - 5 pm). Walk-in users can access public computers by getting a guest pass from the Circulation or Information desk inside each of the Libraries.
+
+If you would like to acquire Library privileges for print materials as a community member, you can sign up for an Affiliated Patron of the Libraries card by completing an application during business hours (Monday - Friday) in the Dean's Office (225 King Library) and by contributing a $25 tax deductible donation (cash or check) annually. Contact Heather Bennett for further details at (513) 529-2397 or bennethm@miamioh.edu <mailto:bennethm@miamioh.edu>. This card does NOT provide off-site access to library databases.
+
+As an Affiliated Patron of the Libraries <http://libanswers.lib.miamioh.edu/faq/168047>, online databases and other electronic resources are available to you on site (from within a library on campus). E-resources are not available to Affiliated Patrons via remote access (from outside the library) due to license restrictions.
+
+If you have urgent research needs and are working with or are being sponsored by a Miami University academic department, you may ask that department to request a University Courtesy Account for you. Courtesy Accounts allow you to access the Libraries' electronic resources. The Libraries cannot initiate, maintain, or renew Courtesy Account requests on your behalf; you must contact the department you are affiliated with and the Department's Dean or Department Chair will request or renew an account <https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=9046> through IT Services for you.
+------------------
+
+All current faculty and students are strongly encouraged to access library e-resources through the links found by searching in thelibrary catalog <http://holmes.lib.miamioh.edu/search/>, A to Z lists <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?profile=pfi>, and LibGuides <http://libguides.lib.miamioh.edu/>. Using links found in these locations ensures that you will be able to access resources whether you are on or off campus.
+
+Note that Miami's VPN NO LONGER provides off-campus access to library resources. You must use a proxied link found through one of the sources above in order to access e-resources while off campus.
+------------------
+
+Proxy Server and Links
+
+-MUL e-resources can be accessed by off-campus students, faculty and staff via the Library’s proxy server.
+-The proxy prefix is http://proxy.lib.miamioh.edu/login?url=
+-You can add the proxy prefix to any subscribed e-resource link to ensure off-campus access.
+-Example of a proxied link: http://proxy.lib.miamioh.edu/login?url=http://www.jstor.org/stable/10.5951/mathteacher.108.5.0376
+
+
+Proxy Errors
+
+If you identify a proxied link that does not work from off-campus, please notify Rich Wisneski <mailto:wisnesr@miamioh.edu?subject=ezproxy%20error>.
+------------------
+
+Re-Direct URLs
+
+Re-direct URLs found in Databases A to Z <http://www.lib.miamioh.edu/databases> and the Online Resources A to Z LibGuide <http://libguides.lib.miamioh.edu/az.php> that begin with http://www.lib.miamioh.edu/indexes/redirect/ do NOT require the proxy prefix.
+
+These URLs automatically push patrons through proxy authentication without the prefix."
+Google Scholar search box on library website not working for off campus users,"The Google Scholar search box on the library website is set up to authenticate off campus users so that they can view Miami University Libraries' full text subscription holdings. Google Scholar sometimes interprets this off campus access as an ""unusually high amount of traffic"" and then blocks access for several days.
+ 
+The Libraries are working on a solution but until we can address that issue, the best workaround is to go straight to Google Scholar online (instead of through the library's website) at https://scholar.google.com <https://scholar.google.com/>.
+ 
+If you are seeing the following error when using Google Scholar:
+
+Try the following workaround:
+
+-Go to https://scholar.google.com <https://scholar.google.com/>.
+-Click the Menu icon in the top left next to ""Google Scholar"".
+-Click Settings.
+-Click Library Links.
+-Type Miami University into the search box and hit enter.
+-Check the box next to ""Miami University Libraries - Find It @MiamiOH"".
+-Click Save.
+
+
+
+
+
+
+
+This will allow you to continue seeing the ""Find it @MiamiOH"" link on Google Scholar search results even if you haven't authenticated through the library website.
+ "
+How do I play a laserdisc or VHS tape?,"The Libraries' collections include films in a variety of physical formats: DVDs, VHS tapes, and laserdiscs. Equipment to play videos in these formats is located in King Library's Instructional Materials Center (IMC) on the ground floor of King. The IMC has 2 VHS/DVD players and a laserdisc player.
+
+You can tell which format a video in the catalog is by checking the ""physical description"" field:
+
+Laserdisc
+
+[Image: laserdisc]
+------------------
+
+VHS Tape
+
+[Image: VHS]
+------------------
+
+DVD
+
+[Image: DVD]
+
+ "
+How do I print in the Libraries?,"Instructions for printing in the Libraries (King, Music, Art and Architecture) can be found online at https://www.lib.miamioh.edu/use/technology/printing/.
+
+-Cost per page: $.10 for black and white / $.25 for color
+-Students pay for printing through their MUlaa account using their student ID. You can use the Value Transfer Stations at King Library to add money to your account.
+-General information about Pay-for-Print on campus is available online at https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=4630.
+-Other on campus Pay-for-Print locations can be found online at https://miamioh.teamdynamix.com/TDClient/KB/ArticleDet?ID=20960.
+
+
+NOTE: As of July 1, 2010, CIM no longer offers large format printing. CIM will still be a location where students can create posters, however printing will be handled by IT Services Print Center in Shriver. See the Print Center site <http://miamioh.edu/printing/> for more information."
+Where can I access Miami University theses and dissertations online?,"Theses and dissertations at Miami are submitted to the graduate school, who in turn submits them to the OhioLink Electronic Theses and Dissertation center; the library is not involved in this process. 
+
+--------------------------------------------
+
+Miami University theses and dissertations submitted from 2001 through the present can be searched, browsed, and accessed via the OhioLINK Electronic Theses and Dissertations (ETD) Center <https://etd.ohiolink.edu/>. ETDs can be searched by keyword and/or browsed by institution and department or author's last name.
+
+The ETD Center is a free, online database of Ohio's undergraduate, masters and doctoral theses and dissertations from participating OhioLINK member schools. It contains the abstract for all included theses and dissertations. The full-text is also available if it was submitted. The ETD Center is freely accessible worldwide to anyone interested in searching, viewing, and downloading the theses and dissertations published in Ohio. Using a standard Web browser, users can search the database using basic keyword searching. Authors, university affiliation, and abstracts are all indexed.
+
+Additional information about the OhioLINK ETD Center for patrons and authors can be found in OhioLINK's ETD Center FAQ <https://etd.ohiolink.edu/f?p=1501:2:210137100109950>.
+
+Some (but not all) Miami University dissertations may also be searched in ProQuest's Dissertations and Theses database <https://libguides.lib.miamioh.edu/proquest-dissertations-and-theses-open> online. Note that this ProQuest database only provides indexing and abstracts. Most dissertations found here will require you to pay a fee to access the full text. "
+How are measures of central tendency affected by the shape of the data?,"Common measures of central tendency <https://libanswers.lib.miamioh.edu/stats-faq/faq/335866/?m=p> are the mean, median, and mode. The mode of the data is affected by the number of peaks in the distribution. Multiple peaks in the data result in multiple modes. While the number and location of the peaks have some impact on the mean and median, these estimators are also affected by whether or not the data is skewed.
+
+Skew refers to whether or not the data is symmetrical. If the data is right-skewed (positive skew) it has a tail on the right side, and if the data is left-skewed (negative skew) it has a tail on the left side. If the data is not left- or right-skewed, it is symmetrical.
+
+If the data is relatively symmetrical, the mean and median will produce similar estimates of the center. However, the graphs below show that when the distribution is skewed, the mean is pulled further in the direction of the tail than the median. For this reason, the median is often a more useful estimator of center when the distribution is heavily skewed or there are extreme outliers in the data.
+
+[Image: three graphs of positive skew, symmetry, and negative skew. In all three graphs, the mode is at the highest point of the distribution. In the graph where a right (positive) skew is present, the mean is slightly further to the right whereas the median is closer to the peak and is in the center of the distribution. In the graph of the symmetrical distribution, the mode, median, and mean all share the same estimate in the highest and most centered point in the distribution. In the last graph where a negative (left) skew is present, the mean is closer to the left side of the distribution, and the median is between the mean on the mode at the center of the distribution.]"
+What is the difference between correlation and causation?,"Correlation establishes that a relationship exists between two variables, while causation means that one event results in the occurrence of the other event. In other words, causation is a stronger statement than correlation, and correlation does not always result in causation.
+
+Suppose you are a statistician studying the relationship between monthly ice cream sales and pool drownings. You notice that both variables increase during the summer months and are therefore correlated. Does this mean that eating ice cream causes people to drown in pools? Of course not! The increase in both variables can be more reasonably explained by warmer temperatures in the summer.
+
+This example highlights the biggest challenge with causation. When you use observational studies (i.e. data collected in the “real world”), there are a lot of hidden factors outside of your control that can affect the results. This makes it challenging to say one event causes another. The best way to show causation is through a designed experiment where you can control all of the factors except the variables of interest. However, this is not always possible and more often than not we have to rely on observational data."
+Why can't I view PDFs in EBSCO?,"Some users of Macintosh OSX may have trouble opening PDF files in EBSCO databases, catalogs, and e-books. Files may be downloaded or opened as "".asp"" files instead of "".pdf"" files. Users may open these "".asp"" files using Adobe Acrobat Reader using ""File"" and ""Open"", or they may rename the file with a "".pdf"" file extnesion.
+
+There is a more efficient method that will accomplish the same result as the above. To set up a Macintosh to automatically open a PDF:
+-
+Download the PDF onto your computer desktop.
+
+-
+Select it by clicking on the downloaded file once.
+
+-
+Go to File>Get Info.
+
+-
+Under Open With select Preview (default) or Adobe Reader.
+
+-
+Click on Change All so that it will always open with Preview or Reader automatically, without requiring that the above steps be followed each time."
+How do I get access to the New York Times online?,"For the most up to date instructions, please refer to the Newspapers Research Guide <https://libguides.lib.miamioh.edu/newspapers>, which has a page dedicated to the New York Times <https://libguides.lib.miamioh.edu/newspapers/nyt>."
+How can I find peer reviewed journal articles?,"There are many ways to determine if a journal or journal article is peer reviewed. Below are two ways to get you started:
+
+If you don't yet have a journal or article in hand:
+-Start at the Libraries' Articles & More <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip&profile=eds> selection on the main page's search box.
+-Type your keywords or subjects into the search box and press enter.
+-On the Search Results page, look for the ""Limit To"" area on the left side of the results.
+-Check the box next to ""Limit to Peer Reviewed Journals"".
+-The Search Results will re-populate with results that are from peer-reviewed journals.
+
+[Image: Peer reviewed limiter in Articles and More]
+------------------
+
+If you already have a journal or article in hand:
+-Go to Ulrich's Periodicals Directory at http://www.lib.miamioh.edu/indexes/redirect/808.
+-Type the title of the journal (NOT the title of the article) into the search box.
+-In the Search Results list, click on the journal title you are interested in.
+-In the ""Basic Description"" section of the record, look for the ""Refereed"" row, which will indicate ""Yes"" (peer reviewed) or ""No"" (not peer reviewed).
+
+[Image: Ulrich's Periodicals Directory refereed]
+
+ "
+What library privileges do I have as a Miami alumni?,"Graduating students: access to online resources ends 45 days after graduation.
+
+Access to the Miami University Libraries' online resources ends when you are no longer a current student, staff, or faculty member.
+
+Other Options
+
+-Miami University alumni may obtain an Affiliated Patrons of the Libraries card by completing an application during business hours (Monday - Friday) in the Dean's Office (225 King Library) and by contributing a $25 tax deductible donation (cash or check) annually. Contact Heather Bennett for further details at (513) 529-2397 or bennethm@miamioh.edu <mailto:bennethm@miamioh.edu>. This card allows you to check out print and other tangible materials from the Libraries. This card does NOT provide off-site (remote) access to library databases due to license restrictions. Online databases and other electronic resources are available to you only while on site (from within a library on campus).
+-If you have urgent research needs after graduation and are working with or are being sponsored by a Miami University academic department, you may ask that department to request a University Courtesy Account for you. Courtesy Accounts allow you to access the Libraries' electronic resources. The Libraries cannot initiate, maintain, or renew Courtesy Account requests on your behalf; you must contact the department you are affiliated with and the Department's Dean or Department Chair will request or renew an account <https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=9046> through IT Services for you.
+-Check with your local public library to see what resources they provide."
+What are common measures of central tendency (center) in statistics?,"Three common measures of central tendency (center) used in statistics are mean, median, and mode.
+
+The mean is the average value of the data. The sample mean \(\bar{y}\) is found by adding all of the values in the dataset together and then dividing by the number of observations. It is represented mathematically using the formula below. Each \(y_i\) represents a value in a dataset with n observations.
+
+\[ \bar{y}=\frac{1}{n}\sum_{i=1}^{n}y_i \]
+
+The median is the middle value in the data. It is also referred to as the 50th percentile because 50 percent of the data is less than the median. The sample median is found by ordering the data values from least to greatest and finding the middle value. If given the dataset {0, 3, 2, 4, 5, 1, 6}, the median value of 3 could be found by rewriting the data as 0, 1, 2, 3, 4, 5, 6.
+
+Mode is the most frequent observation in the dataset. The mode is found by counting how many times each unique observation occurs in the dataset. Mode is used less in practice than mean and median, because it is possible to get more than one value for the mode.
+
+[Image: Three graphs of unimodal, bimodal, and multimodal distributions, where the unimodal distribution has one peak, the bimodal distribution has two peaks, and the multimodal distribution can have three or more peaks.]"
+What newspapers does the library subscribe to?,"The Libraries subscribe to a variety of newspapers in both print and electronic format.
+
+Print newspapers may be found on the ground floor of King Library in the IMC:
+
+-Barron's
+-Chicago Tribune
+-Christian Science Monitor
+-Cincinnati Enquirer
+-Cincinnati Herald
+-Columbus Dispatch
+-Dayton Daily News
+-Jen Min Jih Pao (People's Daily)
+-Journal News
+-Miami Student
+-Monde
+-New York Times (most recent issues behind King Circ Desk)
+-Nezavisimaia Gazeta
+-Oxford Press
+-Plain Dealer
+-Presse
+-Sunday Times
+-Times
+-Wall Street Journal
+-Washington Post
+-Zeit
+
+
+The library also offers online access to a variety of newspapers, including:
+
+-Chicago Tribune Historical <http://www.lib.miamioh.edu/indexes/redirect/790> (1849-1991)
+-Chronicle of Higher Education <http://www.lib.miamioh.edu/indexes/redirect/523> (current)
+-Cincinnati Enquirer <http://www.lib.miamioh.edu/indexes/redirect/1324> (2010-present) & Cincinnati Enquirer Historical <http://www.lib.miamioh.edu/indexes/redirect/1317> (1841-2009)
+-New York Times <http://www.nytimes.com/grouppass> (current) & New York Times Historical <http://www.lib.miamioh.edu/indexes/redirect/791> (1851-3 years ago)
+-Times Digital Archive <http://www.lib.miamioh.edu/indexes/redirect/520> (1785-2010)
+-Wall Street Journal <http://www.lib.miamioh.edu/indexes/redirect/1325> (2008-present) & Wall Street Journal Historical <http://www.lib.miamioh.edu/indexes/redirect/1316> (1889-18 years ago)
+-Washington Post Historical <http://www.lib.miamioh.edu/indexes/redirect/1014> (1877-1998)
+
+
+Please see the Databases A-Z <http://www.lib.miamioh.edu/databases> for more links and/or the Newspapers Guide <http://libguides.lib.miamioh.edu/newspapers> for more information."
+Can non-Miami students use the Miami University Libraries?,"Non-Miami students, community members, and Miami retirees can use the Miami University Libraries on a walk-in basis when the Libraries are open. Walk-in users can access public computers by getting a guest pass from the Circulation Desk inside each of the Libraries.
+
+If you would like to use the Libraries as a community member, you can contact the circulation desk about Affiliated Patron of the Libraries card at (513) 529-4141.
+
+This card does NOT provide off-site access to library databases due to license restrictions, or to K-12 textbooks."
+Does the library provide notary services?,"Notary public services are typically available through the first floor circulation desk Monday through Friday from 9:00 AM to 5:00 PM.
+
+For questions or to arrange a specific time, call King Library Circulation (first floor) at (513) 529-4141."
+How do I renew my books?,"A list of books checked out can be viewed and renewed on the Checkouts & Renewals page available on the Libraries' website at https://holmes.lib.miamioh.edu/patroninfo.html. Log in and follow the instructions.
+
+
+
+ 
+
+You can also renew books at any library on campus at the Circulation Desk."
+How do I reserve a study room?,"Reserve a study room online at http://www.lib.miamioh.edu/schedule-select.
+
+Pick up study room keys at the circulation/information desk of each library.
+
+This Room Reservation system allows any Miami student, faculty, or staff member to reserve rooms in King, Art & Architecture Libraries, Makerspace, AV Production Lab, and Armstrong Student Center study rooms. Log in from wherever you happen to be and schedule a room. Study rooms are an excellent options for quiet study with a partner or for group work. Study rooms are also equipped with technology to make your group work easier. 
+
+Basic Guidelines
+
+-Individuals or groups may only schedule up to 2 hours each day.
+-You can schedule a room up to 2 weeks in advance.
+-Study room keys are checked out to the individual who reserved the room for 2 hours; if you hand off the key to the next scheduled individual or group for your study room, the next individual or group MUST go to the circulation desk and get the key checked out to them. If you don't do this, whoever checked out the key first will incur a fine.
+
+
+Note: Library classrooms and internal meeting spaces are generally reserved for use by Library staff only."
+Does the Miami University bookstore buy back textbooks?,"Yes, the Miami University bookstores on all three campuses buy back books at the end of each semester. Information can be found online at http://www.mubookstore.miamioh.edu/site_buyback_info.asp."
+How do I access Lynda.com?,"The MU Libraries do not have a subscription to Lynda.com. However, the state of Ohio provides this resource <https://www.ohioweblibrary.org/lynda/> to every resident with a library card. 
+
+The university provides access to Infobase Learning Cloud <https://miamioh.edu/hoonuit?_ga=2.246574212.1803949952.1629717385-1995590160.1612963037>, (formerly Hoonuit  and before then, Atomic Learning), which provides resources that are similar to those offered by Lynda.com. Infobase Learning Cloud can be accessed by Miami University faculty, students, and staff."
+"Can Miami faculty, staff, and students get Microsoft Office from the university?","Microsoft Office is available <https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=8713>, at no charge, to faculty, staff, and students through an agreement between Miami and Microsoft. This agreement allows you to install Office Pro Plus on up to 15 devices (five computers, five tablets, and five mobile devices). 
+-Follow this link <https://portal.office.com/OLS/MySoftware.aspx> to Miami's Microsoft portal to get Office Pro Plus for Mac or PC
+-Log in with your Miami email address and myMiami password
+-Your username for this service is your full Miami University email address
+
+
+-Follow the prompts to download and install Office
+
+Important Note: The license for Office Pro Plus will work as long as you are considered an active student or employee, and for approximately one year after you leave Miami. Your computer must occasionally check into a license server over the Internet, or it will temporarily expire until you have a working Internet connection."
+Where can I get help with statistics?,"You can find help at the Stats Help Desk.
+
+This is a virtual service, which had previously been available at B.E.S.T. library.
+
+Please refer to the Stats Desk Homepage <https://libguides.lib.miamioh.edu/stats-help> for more information, including hours or operation and to start a live help session."
+Where can I park on campus?,"Miami University (Oxford) has two parking garages and approximately 100 parking meters on campus which do not require a parking permit for use. Garage and meter fees must be paid for the time parked at either type facility.
+
+A parking permit is required to park on Miami University's campus and the streets which run through or adjoin campus at all times unless otherwise noted.
+
+All of Miami's parking areas are color-coded based on parking privilege:
+
+-RED areas - surface lots on campus in the area of academic and administrative buildings
+-BLUE areas - surface lots on campus in the area of residence halls for students
+-WHITE areas - remote lots for university employees and visitors
+-YELLOW areas - remote/holding lots for students
+
+
+The area in which a vehicle may park is determined by the color of its parking permit; it may also park in areas which are listed below its color in the list above.
+
+An Oxford campus parking map is available online at http://miamioh.edu/_files/documents/parking/2016-17-parking-map.pdf.
+
+Contact Miami University Parking and Transportation Services <http://miamioh.edu/parking/> with specific questions."
+What is the difference between a parameter and a statistic?,"A parameter is a number that describes a population. For example, the true mean age of women in the United States is a parameter. The primary issue with parameters is that they are almost always unknown. To get the true mean age of all women in the United States right now (i.e. the population parameter), you would need to have records of every person in the population.
+
+A statistic is a number that describes a sample. For example, the sample mean age of women in the U.S. calculated from a survey of 1,000 members of that population. The primary goal of collecting sample statistics is to make inferences about the population."
+What is Interlibrary Loan (ILL)?,"Interlibrary Loan (ILL) is available to all students, staff and faculty at Miami. (Sorry, this service is not available to Affiliated Patrons of the Libraries). Books, theses, dissertations, patents, and journal or newspaper articles that are not owned by Miami or any other OhioLINK institution can be ordered through ILL.
+
+Place online requests by using the electronic request form found at https://ill.lib.miamioh.edu/illiad/logon.html. Even though patrons are not charged for using ILL services, the Libraries absorb costs of at least $10.00 per request (this is particularly true for certain journals who levy high per-article copyright fees).
+
+Please be aware that some items requested by ILL take 3 weeks or longer to arrive. Failure to return materials by the due date may result in suspension of library privileges and whatever fines might be levied by the lending library. More information is available from the ILL Request Form <https://ill.lib.miamioh.edu/illiad/logon.html>."
+Where on campus can I return library books?,"You can return Miami University Library books to the circulation desk at any library location in Oxford (King, Music, Art/Architecture) or on the regional campuses in Hamilton (Rentschler Library) and Middletown (Gardner Library). Book drops are also available outside of the Art/Architecture and Music Libraries, at the rear of King Library, and at the west entrance of the Armstrong Student Center.
+
+Digital equipment and other technology items should be returned to the same library/desk where you checked it out from."
+How do I cancel a study room?,"To cancel your study room reservation, please follow the link provided in the confirmation email. 
+
+If you’re having difficulty call Circulation at 513-529-2433.
+ "
+What privileges do I have with the purchase of an Affiliated Patrons of the Libraries card?,"If you would like to use the Libraries as a community member, you can sign up for an Affiliated Patron of the Libraries card by completing an application during business hours (Monday - Friday) in the Dean's Office (225 King Library) and by contributing $25 tax deductible donation cash or check annually. This card does NOT provide off-site access to library databases. Contact Heather Bennett for further details at (513) 529-2397 or bennethm@miamioh.edu <mailto:bennethm@miamioh.edu>.
+
+As an Affiliated Patron, online databases and other electronic resources are available to you on site (from within a library on campus). E-resources are not available to Affiliated Patrons via remote access (from outside the library) due to license restrictions.
+
+-A limit of 20 items may be checked out to an individual at one time, which include OhioLINK items. 
+-Most Miami University items can be renewed. 
+-A maximum of 5 OhioLINK items may be in use at one time.  
+-OhioLINK books have a 21-day loan period and can be renewed up to 4 times as long as another used has not paced a ""hold"" on the item. 
+-OhioLINK media materials (videos, tapes, CD's, DVD's) typically have a 7-day loan period and cannot be renewed. 
+-Overdue fines for Miami University materials: For most items, 50-cents per day to a maximum of $15.00. 
+-Overdue fines for OhioLINK materials: 50-cents per day for the first 3-days. An additional, non-refundable late charge of $35.00 is added for items more than 30-days overdue. 
+-Replacement charges for lost Miami University items: $60.00 minimum replacement fee plus cataloging/processing fee. Any overdue fines will also be added. 
+-Replacement charges for lost OhioLINK items: $75.00 replacement fee plus a $50.00 cataloging/processing fee. 
+-All online databases and other electronic resources are available on site (from within a library on campus). Databases and other e-resources are not available to Affiliated Patrons via remote access (from outside the library) due to license agreements."
+Can you help me find the full text for this citation?," 
+
+There are multiple ways to do this.
+-Search for the title of the journal the article is published in.
+-Use the search on e-journals page <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?profile=pfi> to find the link to the journal.
+-It will show you, and link to, which database/s we can access the journal from, and which date ranges we have access to.
+-If the date of your article falls into the coverage range, click on the database link and you should be able to find the article with the title, author, volume, issue and other information.
+-You'll either see a PDF button or a yellow Find It! button - which will navigate you to the full text PDF.
+
+
+-Search for the article from the main search box on the library home page <https://www.lib.miamioh.edu/>, using the 'Articles and More' selection.
+-​You can enter in any of the citation information as keywords including title, author, journal, and year.
+-It works better if you do an advanced search and tell it what which terms are the title, author and so forth.
+-At the left side of the search results are features to help limit or refine your search by year, subject, and other characteristics.
+-Click the yellow Find It! button to locate the full text PDF.
+
+
+-Search for it on an internet search engine like Google, Bing or DuckDuckGo.
+-Some times articles are not easy to find in library databases and sometimes you don't have all the citation information you need, so this method can be useful.
+-Some articles are published as open access so they are free on publisher's websites.
+-If you find the article you want and it looks like you have to pay for it, please look for it on the library site to see if it's available, and if it's not request it through InterLibrary Loan <https://ill.lib.miamioh.edu/illiad/logon.html>.
+
+
+
+There are times when Miami won't have access to the full text of the citation you are looking for. When this happens, we can ask another library who does have it, to send us/you a copy. This process is called InterLibrary Loan and is free, but can take 3-5 days. 
+
+Please ask for help if you need it."
+Does the library provide access to HBO Documentary films?,"In fall 2018 the library's streaming video platform Kanopy <https://www.lib.miamioh.edu/indexes/redirect/1276> added HBO Documentaries to our offerings.
+
+HBO Documentaries that were available to our users on the Kanopy platform in the fall of 2018 will be removed from the platform after November 26, 2018.
+
+View a list of the deleted films online. <https://docs.google.com/spreadsheets/d/1Pa99lHlGfRG3332jp8li8s_VyfobJauc40mRzD1ljAg/edit?usp=sharing>
+
+Unfortunately, HBO implemented very stringent digital rights management (DRM) on these videos (more stringent than what Kanopy uses on other films in their catalog). The DRM put in place is not compatible with the type of networking practices that are common at large universities such as ours; as a result, these videos are not viewable from any on-campus location. We have worked with both Kanopy and university IT to identify a solution or workaround, but at this time there simply isn't one. HBO is unwilling to change or remove this DRM for us and the university can't change it's networking practices to allow for a single exception like this.
+
+The libraries own some of the HBO documentaries in other formats <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&AuthType=ip,url,uid&bquery=AU+hbo&type=0&site=eds-live&scope=site&db=cat00344a> such as DVD. These can be browsed by doing an AUTHOR search on ""HBO"" in the Books & More tab on the library home page. Subject librarians <https://www.lib.miamioh.edu/people> may also elect to spend discretionary funds on HBO documentaries on DVD if requested by a faculty member and if the DVD is available for purchase."
+When should I use a chi-square test?,"Chi-square tests are used when you are comparing two categorical variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/342540?m=p>. You should perform a chi-square test when you are working with counts of records in different groups. This is different from other hypothesis tests (for example, a t-test) where you are comparing a numerical variable across different groups (i.e. across a categorical variable).
+
+For example, if you were trying to compare the average number of minutes that men and women exercise each day, you would use a hypothesis test. You have a categorical variable (gender) with two levels <https://libanswers.lib.miamioh.edu/stats-faq/faq/342543?m=p> (men and women) and a numerical quantity of interest (minutes exercised per day). But what if you wanted to compare favorite genre of music while exercising between men and women? This would be a situation for a chi-square test. There are two categorical variables, gender and music genre. Gender has two levels (men and women) and suppose genre has 4 levels (country, rap, rock, and hip-hop). Chi-square tests are often represented with contingency tables like the one shown below. Contingency tables show the observed counts for each group.
+
+[Image: The table here is called a contingency table and it has four rows each genre of music, and two columns for gender. Each cell represents the number of observations fall within each combination of music genre and gender. For example, in the first cell is a number 2. This means that there are 2 observations where they are both represented as men and as country music.]"
+I'm working on a paper and need journal articles on my topic. Which databases should I use?,"There are several approaches to this.
+
+-You can find a guide for most subject areas <https://libguides.lib.miamioh.edu/>, on which will be customized selections of databases for finding journal articles and other resources.
+-On the Databases A-Z list <https://libguides.lib.miamioh.edu/az.php>, you can select which subject and or type of database you'd like
+-You can also simply do a search from the library's homepage by selecting 'Articles and more' and entering in your topic. You can then browse articles and over on the left with the limiters and filters, you'll see 'Limit by Database'. This will show you the top databases that your search yielded results from, so those would be good bets to try out."
+How do I embed a streaming video into Canvas?,"Streaming videos from the Alexander Street Press or Kanopy platforms can be embedded into a Canvas course for easier access. 
+
+Alexander Street Press Instructions
+-Search for an ASP film by going to http://www.lib.miamioh.edu/indexes/redirect/905.
+-Click through the site to the video that you would like to embed (for example, http://search.alexanderstreet.com/view/work/1780144).
+-Below the video player, click on the ""Embed/Link"" option.
+-A box will open that contains a permalink. The code will look something like this: -http://proxy.lib.miamioh.edu/login?url=http://search.alexanderstreet.com/view/work/1780144
+
+-Highlight that URL and copy it.
+-In Canvas, open the course that you wish to embed the video in.
+-Add the copied URL from Alexander Street Press to the course page or module of your choice.
+
+Kanopy Instructions
+-Search for a Kanopy film by going to http://www.lib.miamioh.edu/indexes/redirect/1276 and entering a search term in te box.
+-Select a film by clicking on the title.
+-Just below the film player, click the ""Share"" box.
+-Copy the URL from the ""Share Link"" box into a text editor like Notepad.  -The URL will look like: https://miamioh.kanopystreaming.com/video/charles-drew-revolutionized-medical-science
+
+-Paste the following text string in front of the URL you copied from Kanopy: -http://proxy.lib.miamioh.edu/login?url=
+
+-Make sure there are no spaces between the ""="" and the start of the Kanopy URL ""https"". -http://proxy.lib.miamioh.edu/login?url=https://miamioh.kanopystreaming.com/video/charles-drew-revolutionized-medical-science
+
+-Highlight that entire URL and copy it.
+-In Canvas, open the course that you wish to embed the video in.
+-Add the copied URL from Kanopy to the course page or module of your choice."
+What services does the Center for Information Management (CIM) offer?,"The Center for Information Management (CIM) <http://libguides.lib.miamioh.edu/CIM/Home> is an unstaffed computer lab on the first floor of King Library, room 112. Our services  <http://libguides.lib.miamioh.edu/c.php?g=154972&p=4404590>are available to all Miami University students, faculty, and staff. We have high-end software for video production, 2D and 3D design, website building, and digitization. We also have limited equipment for analog-to-digital conversion projects. 
+
+Phone Number: (513) 529-1776
+
+ "
+How many books or other items can be checked out at one time?,"The maximum number of items that can be checked out varies by patron type:
+
+-Faculty / emeritx faculty, and graduate students: 999 items
+-Undergraduate students and staff: 200 items
+-Affiliated patrons of the library (Oxford): 20 items
+-Friends of the library (Hamilton / Middletown: 5 items"
+What does EDA stand for? What should I do if I’m asked to perform EDA?,"EDA stands for Exploratory Data Analysis. You should always perform EDA before completing any inferential statistical analysis. EDA typically involves the collection of descriptive statistics (i.e. measures of center, spread, etc.) and/or the construction of different types of graphs.
+
+EDA is important because it allows you to “discover patterns, spot anomalies, test a hypothesis, or check assumptions.” Here are a couple situations where EDA is helpful:
+-
+You check the range of a variable for human height and find several values of zero. This allows you to fix what is likely a data entry error.
+
+-
+You plan to fit a simple linear regression model. After building a scatterplot, you discover that the relationship between the two variables is actually quadratic and consider the addition of a higher order term to the model.
+
+-
+You plan to fit a multiple linear regression model. You build a heatmap to evaluate the relationship between all variables in the dataset and discover that several of the predictors are strongly correlated with each other. This leads you to consider how multicollinearity will affect the final results.
+
+
+EDA is the statistical equivalent of gathering clues before giving a suspect a lie detector test. If the results of the test match your clues, you can be reasonably confident in the results. However, if the testimony doesn’t match your clues, you need to consider whether the test was the correct approach to the situation in the first place.  "
+How do I add money to my MuLaa account in the Libraries?,"VTS machines on the 1st floor of King Library dispense MuLaa cards for $1. You may add money to a card using these machines. You cannot use a credit/debit card or coins to add money. The nearest ATMs are uptown or in the Armstrong Student Center.
+
+The VTS machines are red and grey, and are located on the 1st floor of King Library near the printing area.
+
+Additional information about printing in the Libraries can be found online at http://www.lib.miamioh.edu/how_to_print."
+Is there a book scanner in the library that I can use?,"The libraries have KIC scanners that are capable of scanning books. After you scan, you can send the scanned PDF to yourself via email. There is a KIC scanner on the first floor and in the basement in King Library. Additionally, any of the pay-for-print printers are set up to scan.
+
+Scanning is free. Technically there are no scanning limits but it is usually best to break longer chapters up into smaller sections due to e-mail attachment size limits.
+
+Scanning of materials from the Walter Havighurst Special Collections is restricted. See the online policy at http://spec.lib.miamioh.edu/wp-content/uploads/2011/12/camera-use-policy-9-11revweb.pdf for further details.
+
+ 
+
+ "
+I'm a Project Dragonfly student/affiliated staff and I can't access the Library e-resources. What should I do?,"Some Project Dragonfly students and affiliated but off-site staff may be unable to access library e-resources when they are not enrolled in any actual courses (even though they may be enrolled in the Project Dragonfly program). The workaround to access library e-resources during these periods is for you to obtain a university IT services courtesy account.
+
+To request this account (or to renew an expired courtesy account), the STUDENT or AFFILIATED STAFF MEMBER must contact the Project Dragonfly coordinators. The coordinators will place a request with IT services to set up or renew a courtesy account on your behalf. This account must be requested from University IT Services by Project Dragonfly--please contact Connie Malone directly to arrange this:
+
+Ms. Connie M. Malone
+malonecm@miamioh.edu
+(513) 529-5103"
+Which Taylor and Francis journals does Miami University Libraries subscribe to?,"The libraries subscribe to many (but not all) Taylor and Francis e-journals. To find out if Miami subscribes to a particular T&F title, go to Online Journals/Resources <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?profile=pfi> and search by title."
+"I checked out a book/laptop/calculator etc. and it's now missing/overdue, etc.",Please call the Circulation Desk at (513) 529-4141.
+Can visiting scholars at Miami University access library materials and resources?,"Yes. If you have a Miami University unique ID and password and a university-issued ID card, you may borrow library materials and use library resources as per the library policies at http://www.lib.miamioh.edu/policies.
+
+If you are affiliated with or sponsored by a department and working on a university-affiliated project while off campus, you may ask that department to request a University Courtesy Account for you. Courtesy Accounts allow you to access the Libraries' electronic resources. The Libraries cannot initiate, maintain, or renew Courtesy Account requests on your behalf; you must contact the department you are affiliated with and the Department's Dean or Department Chair must request or renew an account <https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=9046> through IT Services for you. This is true for all visiting scholars and for researchers and faculty affiliated with programs like Project Dragonfly."
+How can I use statistical software without downloading it onto my personal computer?,"Many classes at Miami require the use of statistical software programs like SPSS, Stata, JMP, SAS, and R. With the exception of R, none of these tools are free to download onto a personal computer. As a result, Miami students should use these tools through the virtual PC. The steps for connecting to the virtual PC are provided below. Note that using the virtual PC does not require a virtual private network (VPN) connection.
+-Go to the Miami University website to access the virtual PC <https://miamioh.edu/fsb/facilities/office-of-technology/student-resources/virtual-pc/index.html> .
+-Choose For Windows or For Mac and click the appropriate link.
+-Enter your Miami unique ID and password.
+-Download the connection for FSB Desktops.
+-Double click the downloaded connection and login to the virtual PC with your unique ID and password.
+-Click on the folder icon entitled Departmental Apps. There is a desktop icon in the left column, second row from the top. If you’re using a Windows machine, you can click the Start button in the bottom left and search for it that way.
+-Click the Statistical Programs folder. You should now be able to access to SPSS, JMP, MatLab, R, SAS, STATA, and Minitab. 
+
+For statistics student that only need R and RStudio, it is easier to install this software <https://courses.edx.org/courses/UTAustinX/UT.7.01x/3T2014/56c5437b88fa43cf828bff5371c6a924/> on a local machine. They are both free to use and installing them locally means avoiding reliance on the desktop connection."
+I need to talk to one of the librarians. How can I get in contact with them?,"See the list of all Librarians and Staff here at http://www.lib.miamioh.edu/people.
+
+Each librarian lists their Liaison Responsibilities here, so you can easily find which librarian specializes in your subject on this page.
+
+Each Subject and Course guide also typically lists the name and contact information for the subject specialist librarian at http://libguides.lib.miamioh.edu/."
+What is the Library's policy on gifts and donations?,"The Miami University Libraries welcomes the donation of gifts-in-kind not already in library collections in the following categories:
+
+-Hardback or trade paperback books in good to excellent condition
+-CDs and DVDs in good playable condition in their original cases
+
+
+Because of reduced staff we cannot accept the following:
+
+-Mass-market paperbacks
+-Textbooks more than 2 years old
+-Journal articles, issues or volumes*
+-Folders, binders
+-Theses, dissertations
+-VHS or audio cassette tapes
+-Vinyl records (33 (LP), 45 or 78 rpm)
+-Mildewed or musty materials of any type
+
+
+All donations of gifts-in-kind are accepted with the understanding that the Libraries will retain only those materials that meet our collection needs. These decisions are made at the discretion of the subject librarian.
+
+The Libraries cannot assist in packing or transporting donated materials. On campus, the donor’s department may contact the trucking crew to arrange transportation of large collections. Off campus, the donor should arrange transportation to the King Library shipping room door (off the drive between King Library and McGuffey Hall). Please contact the Libraries about your gift before arranging for delivery.
+
+If you wish to claim a donation as a tax deduction, please be aware that the Libraries are not permitted to provide any appraisal or value estimate. The donor is responsible for following IRS rules. Once accepted, donations become the property of Miami University and cannot be returned to donors.
+
+Donors who believe their materials are of special value or of historical significance should contact Walter Havighurst Special Collections (513 529-3323).
+
+For further information or to discuss your gift plans, please contact Library Acquisitions, 513 529-2886.
+
+Thank you for your cooperation and support of the Miami University Libraries.
+
+*The Libraries currently provide most journals in an electronic format. A complete run of a print journal not available online will be considered as an exception.
+
+Last Updated: 5/29/2012"
+How do I search for videos?,"The Libraries own VHS tapes, DVDs and laserdiscs that can be checked out. Streaming videos are also available to faculty, staff, and students.
+
+You can search for all formats in the Books & More <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip&profile=eds_cat> section on the Libraries' website. 
+
+You can also browse streaming videos in several databases. To find which databases there are, navigate to the Databases A-Z list, and narrow down the list by 'type' and selecting 'video'. There are more than 15 to pick from including:
+
+Alexander Street Press <http://www.lib.miamioh.edu/indexes/redirect/905>
+
+Kanopy Streaming Video <http://www.lib.miamioh.edu/indexes/redirect/1276>
+
+New World Cinema <https://libguides.lib.miamioh.edu/new-world-cinema-independent-features-shorts-1990-present>"
+How do I check out a book?,"Library materials, including books, equipment, and digital equipment, can be checked out from any of the Circulation Desks in campus libraries: King Library, Wertz Art and Architecture Library, and the Amos Music Library."
+Is there a section of books on my topic in the library?,"Most likely, yes. Books are arranged on the shelf by call number (consisting of letters and numbers), and group similar subjects together. Miami University uses the Library of Congress Classification System <https://www.loc.gov/catdir/cpso/lcco/>.
+
+The first letter of the call number represents the following:
+
+A -- GENERAL WORKS  
+B -- PHILOSOPHY. PSYCHOLOGY. RELIGION  
+C -- AUXILIARY SCIENCES OF HISTORY  
+D -- WORLD HISTORY AND HISTORY OF EUROPE, ASIA, AFRICA, AUSTRALIA, NEW ZEALAND, ETC.  
+E -- HISTORY OF THE AMERICAS  
+F -- HISTORY OF THE AMERICAS  
+G -- GEOGRAPHY. ANTHROPOLOGY. RECREATION 
+H -- SOCIAL SCIENCES  
+J -- POLITICAL SCIENCE  
+K -- LAW  
+L -- EDUCATION  
+M -- MUSIC AND BOOKS ON MUSIC 
+N -- FINE ARTS  
+P -- LANGUAGE AND LITERATURE  
+Q -- SCIENCE  
+R -- MEDICINE 
+S -- AGRICULTURE  
+T -- TECHNOLOGY  
+U -- MILITARY SCIENCE  
+V -- NAVAL SCIENCE  
+Z -- BIBLIOGRAPHY. LIBRARY SCIENCE. INFORMATION RESOURCES (GENERAL)
+
+Many of the subject and course guides <http://libguides.lib.miamioh.edu/> list call numbers where books on a subject can be found. 
+You can also search for your topic by selecting 'Books & More' on the main search box on the library’s homepage <http://www.lib.miamioh.edu/>."
+Why can't I access Safari e-books?,"The Safari e-books platform changed in December 2018. Links to e-books on the old platform no longer work and do not re-direct. 
+
+To locate the new URL for a Safari e-book, search for the specific book title in the Online Resources A-Z list <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?profile=pfi> or browse the new Safari platform at https://miamioh.edu/ <https://miamioh.edu/safarionline>safarionline <https://miamioh.edu/safarionline>."
+How do I search for a book?,"Select 'Books and More' on main search box at the library’s homepage <http://www.lib.miamioh.edu/>, or in the Library's Classic Catalog <http://holmes.lib.miamioh.edu/search/>.
+
+You can search by keyword, title, author, and more. "
+Where can I find information about citation managers?,"There is a Citation Managers guide <https://libguides.lib.miamioh.edu/CitationManagers> with information on EndNote Online, Mendeley and Zotero.
+
+Zotero and Mendeley are free citation mangers.
+
+Please note: the Libraries do not subscribe to any citation managers.
+
+ "
+How do I request an item from OhioLINK?,"Items not currently available may be requested through the OhioLINK catalog, which will display the combined holdings of all OhioLINK institutions. Provided that the item is in AVAILABLE status at another OhioLINK institution, the Request Item link will enable you to request a book or other circulating item. All items have a THREE WEEK loan period, but may be renewed up to four times if not requested by another user."
+What equipment can I check out from the Libraries?,"Equipment available for checkout is listed online at http://www.lib.miamioh.edu/items-for-checkout. Different library locations have different equipment, so check this list for the appropriate location. Loan periods for each type of equipment can be found by clicking on the name of the item (e.g., MacBook <http://www.lib.miamioh.edu/content/macbook>) once you've reached the Items for Checkout page mentioned above.
+
+-Most laptops and tablets have a loan period of 3 hours.
+-Other types of equipment generally have loan periods of 24 hours."
+What if a categorical predictor in a regression model has more than two groups?,"One challenge with using dummy variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/343631?m=p> in a regression model is that you can only compare the effect of binary categorizations. Comparing the effect of gender is easy because you only have two groups, male and female. But what if you wanted to fit a model using a participant’s education level, religion, political affiliation, or marital status? These predictors are not binary. 
+
+You can solve this problem by using multiple dummy variables to create binary groups. In general, you will have one less dummy variable than you have groups. Start by selecting one group as the baseline. In many cases, there is a natural baseline. For example, we might select participants who are atheists (i.e. not religious) as the baseline for a religion variable.
+
+Next, create a dummy variable for each of the other categories. Continuing with the above example, we might have dummy variables for whether or not the participant is Christian, whether or not the participant is Muslim, whether or not the participant is Buddhist, etc. Each dummy variable represents the change in mean response from the baseline to the factor level represented by the dummy variable. "
+What accessibility resources are available through the Libraries?,"See the Accessibility Resources guide at http://libguides.lib.miamioh.edu/accessibility.
+
+Contact Katie Gibson <mailto:gibsonke@miamioh.edu?subject=accessibility> for additional information at gibsonke@miamioh.edu"
+Is there a cost for using the Makerspace?,
+What are King Cafe's hours?,The King Cafe hours are available online <https://www.google.com/calendar/embed?src=p31delvn2k4g44ml6i80kb2h5o%40group.calendar.google.com&ctz=America/New_York>.
+What are the replacement costs for library materials?,"Miami University Libraries Materials
+
+-Books - The replacement cost for lost material is $70.00 per item, plus a $30.00 cataloging and processing fee. Any overdue fines will also be added. Replacement charges cannot be refunded for items more than one year overdue
+-Electronic Equipment - $2,000 per laptop, $495 per digital camera, and actual cost for accessories.
+-Repair Charges - Charges to repair damaged or mutilated library materials or equipment will reflect actual repair costs.
+
+
+OhioLINK Overdue Fines / Replacement Costs
+
+Fines for OhioLINK materials are set by a coordinating committee of the members' librarians.
+
+-Overdue OhioLINK item fines are $0.50/day.
+-Returning an item that is more than 30 days overdue will incur a $50 fine.
+-After 30 days, patrons will be billed for $125.00 is replacement costs. If the book is returned after the replacement bill has been issued, the patron will still owe $50.
+
+
+SearchOHIO Overdue Fines / Replacement Costs
+
+-Overdue SearchOHIO item fines are $0.50/day. There is NO grace period.
+-Returning an item has been billed and/or is more than 30 days overdue will incur a $50 fine."
+Where can I learn more about Kanopy streaming videos?,"Information on making a request for a Kanopy streaming video and where to find the lease expiration date, can be found on the Streaming Videos Guide page on Kanopy <https://libguides.lib.miamioh.edu/videos/kanopy>. 
+
+Information on embedding Kanopy videos into Canvas, and for Kanopy support links, see the Video Content Guide page on Kanopy <https://libguides.lib.miamioh.edu/c.php?g=957723&p=6922813>.
+
+You may also browse Kanopy videos online <http://www.lib.miamioh.edu/indexes/redirect/1276>."
+How much do overdue books cost?,"Miami University Materials
+
+-Books - $.50 per day to a maximum of $15.00.
+-IMC Videos - $2.50 per day up to a maximum of $15.00 per video.
+-Reserve Items - $2.50 for the first hour overdue and $.75 per additional hour, to a maximum of $24.25 per item.
+-Recalled Materials - $.75 per day to a maximum of $24.25 per item.
+-Electronic Equipment (e.g., laptop computers): $5 per hour to a maximum of $100.
+
+
+OhioLINK Overdue Fines / Replacement Costs
+
+Fines for OhioLINK materials are set by a coordinating committee of the members' librarians.
+
+-Overdue OhioLINK item fines are $0.50/day.
+-Returning an item that is more than 30 days overdue will incur a $50 fine.
+-After 30 days, patrons will be billed for $125.00 is replacement costs. If the book is returned after the replacement bill has been issued, the patron will still owe $50.
+
+
+SearchOHIO Overdue Fines / Replacement Costs
+
+-Overdue SearchOHIO item fines are $0.50/day. There is NO grace period.
+-Returning an item has been billed and/or is more than 30 days overdue will incur a $50 fine.
+
+
+REMINDER: Patrons are responsible for all items on their account. A list of books checked out can be viewed (and renewed) on the Checkouts & Renewals <http://www.lib.muohio.edu/circrecord/> page available on the Libraries' web site. Overdue notices are provided as a courtesy; non-receipt of an overdue message does not exempt patrons from fines."
+Do you have my textbook at the library?,"We have a number of textbooks on reserve at the Libraries. These books are for courses with the 50 highest enrollments that use a single text in all sections. These books can be checked out for use within the library for a 2-hour period and can be renewed if no other requests for the textbook have been made.
+
+Available textbooks are listed online at http://www.lib.miamioh.edu/reserves.
+
+You can also search the Books & More tab <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip&profile=eds_cat> on the library homepage by class (ex: ENG 111) or by book title.
+
+Information for faculty on reserves may be found online at http://www.lib.miamioh.edu/facultyreserves."
+How do I find a journal in Factiva?,"Some journals will appear in Factiva's Newsstand. You can browse articles from these titles; if you can change geographies you will get a different set of journals to browse.
+
+However, some journals in Factiva are not browsable this way, so you will need to go to 'Search Builder', type in a keyword and then select the name of your source (i.e. Financial Times).
+
+For more tips, see the Factiva Factsheet. <https://view.highspot.com/viewer/5fb6c72c659e9362fb1d59a4?iid=5dfc35c8df369d4308bec631>"
+"I can't find the book I need in the Miami Libraries, OhioLINK, Lane, or anywhere else. What should I do?","You may request a book not available from the MU Libraries, OhioLINK, or Lane Public Library by placing an Interlibrary Loan request.
+
+Interlibrary Loan (ILL) is available to all students, staff and faculty at Miami (this service is not available to Affiliated Patrons of the Libraries). Books, theses, dissertations, patents, and journal or newspaper articles that are not owned by Miami or any other OhioLINK institution can be ordered through ILL.
+
+Place Ill requests online by using the electronic request form at https://ill.lib.miamioh.edu/illiad/logon.html. Even though patrons are not charged for using ILL services, the Libraries absorb costs of about $10.00 per request (this is particularly true for certain journals who levy high per-article copyright fees).
+
+Please be aware that some items requested by ILL may potentially take 3 weeks or longer to arrive. Failure to return materials by the due date may result in suspension of library privileges and whatever fines might be levied by the lending library."
+I'm trying to access an article and the site wants me to pay for it. How do I get it?,"You are most likely on a publisher's website if it's asking you to pay to access the article.
+
+First, look it up from the libraries' site. Search for it on 'Articles and More', or 'Google Scholar' from the Libraries' Homepage <http://lib.miamioh.edu>.
+
+When you find the article citation, you might see the PDF link right away - that's great.
+
+Sometimes the PDF takes a few more clicks to get to, so if you see a yellow 'Find it!' button (it's not yellow on Google Scholar, but it's still there) - click on it.
+
+You'll get either a choice/s to which database you can find the PDF in or will see that 'No full text available online'.
+
+If no full text is available online, then unfortunately we don't have an electronic copy. However we can still get it for you by borrowing it from another library who has it. This is called InterLibrary Loan. If you click on the link to 'Request this item through InterLibrary Loan' from this page, it will have you login and fill out the request form for you with all the citation information. You'll get an email in 3-5 days letting you know the PDF is ready for you."
+I am graduating - how can I return my library materials?,"IF you plan on returning to campus in the fall, please hold on to your books for now,  due dates are being extended until September, and no fines will be accrued.
+
+ 
+
+By Bookdrop
+
+We are trying to keep the bookdrops available for use. The best one to use is on the South side of King LIbrary, near the King Cafe Entrance.  All library books, including SearchOhio, OhioLINK, and books from all Miami branches, may be returned at the bookdrop. 
+
+We do not have staff on-hand to check in these books. We are continuing to renew all books until we are able to return to the Libraries following the COVID-19 closure. If the Libraries open before your return, please contact libfines@lib.miamioh.edu to alert us to your schedule. We will continue to renew items until your return.
+
+By Mail
+
+King Circulation
+151 S. Campus Ave
+Miami University
+Oxford, OH 45056
+
+We will not be able to check in books until the Libraries re-open following the COVID-19 crisis, so they may continue to appear on your library account; however, we will continue to renew them until that time.
+
+***Please note: Library staff are not in the buildings right now, so if you've returned items, they will show as unreturned in your online account until staff can return to the buildings and scan items in. Fines will not accrue during this time.    For questions please contact:   libfines@lib.miamioh.edu <http://lib.miamioh.edu/>
+
+ "
+"How do I place a hold, recall a book, or request something from SWORD?","Recalls
+
+All patrons are entitled to use checked out items for at least 21 days unless they have been recalled for use as Reserve Readings or by another patron.
+Before recalling an item, please check the OhioLINK catalog <http://olc1.ohiolink.edu/search/> to see if another copy is available elsewhere in the state. You may place a recall request through the catalog by clicking on the Request Item link.
+ 
+If you receive a Recall notice for a material that is checked out to you, please return it to the Libraries.
+ 
+
+Holds
+
+A hold may be placed on items due in less than 21 days. After the item has been returned and checked in, a notice will be generated and e-mailed to you indicating that the item is available for pickup.
+
+Books will remain on the hold shelf for 10 days before a hold expires. Videos will remain for four days. Books on hold shelf cannot be checked out by another patron before the hold expires.
+
+Southwest Ohio Regional Depository (SWORD)
+
+The Southwest Ohio Regional Depository (SWORD) is a remote storage facility that houses less frequently used library materials. Requests for books and complete journal volumes may be placed online. Once you have located the item you need in the Libraries' catalog, select the Request Item link and follow instructions. Please allow 2-3 business days to receive the requested item. Materials will be sent to the library location that you designate at the time of the request.
+
+Copies of articles from journals housed in the Southwest Depository can also be requested. Locate the journal title you need in the MUL catalog, select the Request Item link, then select Article from S.W. Depository. Complete all the information about the journal article on the online form. As with other materials requested from SWORD, please allow 2-3 business days. You will receive a URL at which you can obtain the item you requested, or the item may be sent to the library location that you designate at the time of the request."
+What are the Libraries' hours?,"The Libraries' hours are available online at http://www.lib.miamioh.edu/hours <http://www.lib.miamioh.edu/hours/>
+
+ 
+
+ "
+How do I get to the EBSCO search platform?,"EBSCO hosts numerous databases. A  general search on EBSCO's Academic Search Complete is available at http://www.lib.miamioh.edu/indexes/redirect/227. Once you are there, it will tell you which database/s you are searching and will have the option to ""Choose Databases"" above the search box. It allows you to search multiple databases at once.
+
+Alternatively, you can search for 'Articles and More' from the libraries' homepage at http://www.lib.miamioh.edu/, by choosing ""Articles and More"" and entering your search in the box. This will search EBSCOhost and all other library databases.
+
+ "
+How do I measure the relationship between two variables?,"Covariance and correlation are used to measure the relationship between two random variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/343626?m=p>. Both are measures of linear dependence. 
+
+Suppose X and Y and two random variables. Covariance is calculated as follows:
+
+\[Cov(X,Y) = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{n-1 }\]
+
+Covariance by itself is not useful by itself because it depends on the units of X and Y. Correlation resolves this problem by standardizing the covariance so that it is unitless. Correlation is calculated as follows:
+
+ 
+
+\[Corr(X,Y) = \frac{Cov(X,Y)}{\sqrt{Var(X)Var(Y)}} = \frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{n}{(x_i-\bar{x})^2\sum_{i=1}^{n}(y_i-\bar{y})^2}}}\]
+
+ 
+
+Correlation is always a value between -1 and 1. The number represents the strength of the relationship, and the sign represents the direction. A value of -1 means there is perfect negative correlation, and a value of 1 means there is perfect positive correlation. If the correlation is 0, then X and Y are uncorrelated. The leftmost plot has \(Corr(Y_1, Y_2) \approx 0\), the middle plot has \(Corr(Y_1, Y_2) = 1\), and the rightmost plot has \(Corr(Y_1, Y_2) = -1\).
+
+[Image: The three scatter plots below show graphically what a correlation of zero, one, and negative one look like. A correlation of zero is represented by a scatter plot of a cluster of points with no real pattern, hence no correlation between the x and y axis. The plot which demonstrates graphically a correlation of one is a plot where all the plot fall perfectly on the positive slope diagonal of y = x, hence a perfect positive correlation. The last graph represents graphically a correlation of negative one, and like the last graph these points fall perfectly on a diagonal line, but now the slope is negative and the line is y = negative x, hence a perfect negative correlation.]
+
+ "
+How do I interpret the output from a hypothesis test?,"There are two important outputs from a hypothesis test: the test statistic and the p-value. Both can be used to evaluate the results of the hypothesis test.
+
+A test statistic is a value calculated from the sample. It is standardized so that it can be compared to a known point, or “critical value”, on a sampling distribution. For example, in large sample tests we often standardize the test statistic to follow a standard normal distribution.
+
+The critical value depends on the sampling distribution and the significance level \(\alpha\). If the test statistic is more extreme than the critical value, you reject the null hypothesis. In the graph below depicting a right-tailed hypothesis test, the test statistic would be more extreme than the critical value if it fell in the red region.
+
+ 
+
+
+
+ 
+
+The other approach is to use a p-value. A p-value is the probability of observing a more extreme test statistic under the null hypothesis. If the p-value is less than the significance level, you reject the null hypothesis. In other words, smaller p-values signify stronger evidence against the null hypothesis. In practice, p-values are easier because they don’t require finding a critical value."
+What software do the Libraries support?,"Lists of hardware and software available in each Library are available online <http://www.lib.miamioh.edu/computing> by clicking the ""Software"" link to the right of each location.
+
+Additional information about hardware and software available in the Center for Information Management (CIM) in King Library is available online <http://libguides.lib.miamioh.edu/CIM>."
+What are the loan periods for books?,"Miami University Books
+
+-Undergraduate Students - 3 Weeks
+-Graduate Students - 1 Semester
+-Faculty - 1 Year
+-Other Patrons - 3 Weeks
+
+
+Library materials are a shared resource. All items may be recalled after a minimum three week loan period if another Miami University patron requests them. Items needed for course reserve will be recalled immediately.
+ 
+
+IMC collections
+
+All Students and Faculty - 3 weeks
+
+Reserves
+
+Loan periods for Reserve Items vary from 2 hours to 7 days. See the section Reserve Items for details.
+
+Journals
+
+Graduate students and faculty may check out journal issues/volumes for 24 hours with approval from the Reference Librarian on duty.
+
+OhioLINK Materials
+
+Regular Items
+
+Students and staff: Three weeks with up to a maximum of 6 renewals. Renewals not permitted if the item is requested by borrower at the library that provided the item.
+
+Faculty: Six weeks with up to a maximum of 6 renewals. Renewals not permitted if the item is requested by borrower at the library that provided the item.
+
+Media Items
+
+1 week (maximum of 3 renewals)
+
+OhioLINK items should be returned to the bookdrop inside or outside the library from which they were borrowed.
+
+SearchOHIO Materials
+
+Regular Items
+
+Students and staff: Three weeks with up to a maximum of 3 renewals. Renewals not permitted if the item is requested by borrower at the library that provided the item.
+
+Faculty: THREE weeks with up to a maximum of 6 renewals. Renewals not permitted if the item is requested by borrower at the library that provided the item.
+
+Media Items
+
+1 week (no renewal)
+
+SearchOHIO items should be returned to the bookdrop inside or outside the library from which they were borrowed."
+What type of equipment and software do you have in the VR lab?,
+Where can I find information about citation styles?,"The libraries have a Citation Resources Guide <https://libguides.lib.miamioh.edu/citation> with information about APA, MLA, Chicago/Turabian, and science citation styles.
+
+There are other sites that also provides a good overview of citation resources."
+I'm not enrolled in classes and my library account has expired but I'm still working on my thesis or dissertation. Can I continue to borrow library materials?,"Library account expiration dates are automatically updated when students register for fall / spring semesters. For students who are not enrolled in classes, but are continuing to work on theses/dissertations, you will need to verify your current physical and email addresses with Library Circulation at (513) 529-4141 to ensure that you will receive any recall or overdue notices. 
+
+Please note that this only provides access to the Libraries' physical materials. Off-site access to online research databases are contractually limited to currently enrolled students and faculty. However, anyone is welcome to come to the Libraries during business hours and use research databases on site.
+
+If you need off-campus access to library e-resources to complete your thesis or dissertation, you must ask your department to request a University Courtesy Account for you. Courtesy Accounts allow you to access the Libraries' electronic resources. The Libraries cannot initiate, maintain, or renew Courtesy Account requests on your behalf; you must contact the department you are affiliated with and the Department's Dean or Department Chair must request or renew an account <https://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=9046> through IT Services for you."
+How do I use EBSCO e-books?,"EBSCO e-books can be read online on your computer or laptop or you can read them using the Ebsco e-book app on a tablet or other mobile device. Please note that many EBSCO e-books are single user e-books, so if someone else is using one, you won't be able to access it yourself until the other person is finished with it.
+
+To read on your computer or laptop (PDF):
+-Search for the ebook on Ebsco: http://www.lib.miamioh.edu/indexes/redirect/937
+-Click the ""PDF Full Text"" link on the left pane or click ""Download this eBook"" (this option requires you to install Adobe Digital Editions on your computer).
+
+To use the Ebsco ebook mobile app:
+-Download the EBSCO eBooks app from Google Play (https://play.google.com/store/apps/details?id=com.ebscohost.reader&hl=en) or iTunes (https://itunes.apple.com/us/app/ebsco-ebooks/id1022041769?mt=8)
+-Find your library and sign in to access their collection
+-Search and browse to find the titles you're interested in
+-Download an EBSCO eBooks by clicking on the ""Download"" link on the search result page or from within the detailed record
+-Select your preferred checkout period and click Checkout & Download
+-The title automatically opens in the EBSCO eBooks app
+-Begin reading the title in the app, bookmark your place for later and return it to the library's collection when finished"
+Where can I find e-books?,"Check out the E-Books tab on the Reference Resources guide at http://libguides.lib.miamioh.edu/reference/ <http://libguides.lib.miamioh.edu/reference/ebooks>ebooks <http://libguides.lib.miamioh.edu/reference/ebooks>.
+
+You may also search the Books & More tab on the library’s homepage at http://www.lib.miamioh.edu/. Narrow your results to Electronic Resource (listed under Format) on the left side of the page."
+Can I check out digital equipment for several days over a weekend or break?,"Go the Libraries' Circulation Desk and talk with the supervisor--they can usually work something out.
+
+King Library (513) 529-4141"
+Where can I go to get my personal laptop repaired?,"Students have access to computer services (hardware repair and software repair/consultations) through MiTech Computer Services <https://www.mubookstore.miamioh.edu/site_mitech_repairs.asp> located in Shriver Center at 701 E. Spring St.
+
+ 
+
+ "
+What should I do if I can't find a book?,"If you are having difficulty locating a book in the stacks consider browsing the pre-shelving/sorting shelves on the second floor of King Library.
+
+If you are still unable to locate the book, fill out a Missing Book form, available on request at the Circulation Desk. Library staff will search for the item and notify you if the book is found or replaced. If you are unsure of an item's location, please ask for assistance at the Circulation Desk."
+What type of digital scholarship projects do you support?,
+Which library videos have public performance rights?,"The Libraries own VHS tapes, DVDs and laserdiscs, some of which may include public performance rights. Please contact Karen Clift <mailto:cliftks@miamioh.edu?subject=Film%20PPR> to determine if the library purchased public performance rights for an individual title.
+
+-Library-owned films on DVD, laserdisc, and VHS DO NOT include public performance rights UNLESS you see a note in the catalog record that states otherwise.
+-Showing library-owned films outside of the classroom without public performance rights may be illegal.
+-If the library did not purchase public performance rights, it is the responsibility of the individual or organization intending to publicly screen the film to secure public performance rights.
+
+
+Streaming videos available to faculty, staff, and students may also be found by searching the title of the video in the Books & More <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip&profile=eds_cat> tab on the Libraries' website. 
+
+You may also browse streaming videos in the following databases:
+
+Alexander Street Press <http://www.lib.miamioh.edu/indexes/redirect/905>
+
+Kanopy Streaming Video <http://www.lib.miamioh.edu/indexes/redirect/1276>
+
+OhioLINK Educational and Instructional Videos <http://www.lib.miamioh.edu/indexes/redirect/282>
+
+All films in the streaming databases above include public performance rights as long as no admission fee is charged."
+How do I get a book that's on reserve in the library?,"Faculty may place library books, personally owned books, individual chapters, or textbooks on reserve at the King, Art & Architecture, or Music libraries. In the library catalog, reserve materials will indicate ""RESERVE"" in their Location/Call # field.
+
+You can search for materials on reserve at http://www.lib.miamioh.edu/reserves. 
+
+Ask for reserve materials at the circulation desk of each library.
+
+Reserve materials check out for 2 hours at a time and must be used within the library.
+
+Faculty wishing to place materials on reserve should fill out the form at:
+
+http://www.lib.miamioh.edu/reserve-request-form and send it to the appropriate email address:
+
+-King Library: kingreserves@miamioh.edu <mailto:kingreserves@miamioh.edu>
+-Art & Architecture Library: aareserves@miamioh.edu <mailto:aareserves@miamioh.edu>
+-Music Library: musicreserves@miamioh.edu <mailto:musicreserves@miamioh.edu>"
+What is a Digital Object Identifier (DOI)?,"A digital object identifier <https://www.doi.org/faq.html> (DOI) is a unique alphanumeric string assigned by a registration agency (the International DOI Foundation) to identify content and provide a persistent link to its location on the Internet. The publisher assigns a DOI when your article is published and made available electronically.
+
+All DOI numbers begin with a 10 and contain a prefix and a suffix separated by a slash. The prefix is a unique number of four or more digits assigned to organizations; the suffix is assigned by the publisher and was designed to be flexible with publisher identification standards.
+
+The DOI is typically located on the first page of the electronic journal article, near the copyright notice. The DOI can also be found on the database landing page for the article.
+
+If you need to cite a resource with a DOI, check the Library's Citation Resources Guide <http://libguides.lib.miamioh.edu/citation> for links to specific citation styles and rules."
+Can I chat online with a library staff member?,"Yes.
+
+Online chat with a library staff member is available at http://www.lib.miamioh.edu/askus.
+
+Online chat is available during the same hours that the King Information Desk is staffed <http://www.lib.miamioh.edu/hours>. 
+
+For assistance at other times, you can submit a question using the online form at http://www.lib.miamioh.edu/askus/reference."
+"How do I get a copy of a book that is listed in the catalog as ""missing"", ""lost"", ""on order"", etc.?","Sometimes Miami University Libraries' books or other materials may be marked with something other than ""Available"" in the catalog:
+
+-Billed
+-Bursar
+-In Copy Cat
+-In Repair
+-In Transit
+-Lib Use Only
+-Lost; Paid
+-Missing
+-New Bk Display
+-Off-Campus
+-On Hold Shelf
+-On Order
+-Request Item
+-Temp Unavailable
+
+
+If you find an item marked with one of these statuses, ask staff at the Circulation or Information Desk in any of the libraries, who will be able to help you locate another copy. You may also request a copy of the item from another library in OhioLINK  <http://olc1.ohiolink.edu/search>or through the Libraries' Interlibrary Loan Services <https://ill.lib.miamioh.edu/illiad/logon.html>."
+How do I cancel a request for a print book?,"If you have requested a book from one of the library branches, SWORD or OhioLINK, and no longer need it, you can cancel the request online by following the instructions below:
+-Go to My Checkouts at https://holmes.lib.miamioh.edu/patroninfo.html and log in with your unique ID and password.
+-Click on the ""request (hold)"" link.
+-Check the box in the CANCEL column next to the titles you wish to cancel.
+-Click Cancel Selected Items.
+-Click Yes.
+
+ "
+What is ANOVA and when is it used?,"ANOVA stands for Analysis of Variance. A one-way ANOVA is used to analyze the effect of a factor variable with k levels <https://libanswers.lib.miamioh.edu/stats-faq/faq/342543?m=p> on a numeric response.  For example, if you were analyzing the blood pressure of study participants by gender, you would use a one-way ANOVA with two levels (male and female). The ANOVA will determine if there is a statistically significant difference between the mean blood pressure for male and female participants.  
+
+You can also perform a two-way ANOVA if you need to analyze the effect of two factor variables instead of just one. You would use a two-way ANOVA if you wanted to add whether or not the participant exercised prior to the blood pressure measurement as a factor in the analysis."
+What is a random variable?,"The formal mathematical definition of a random variable is “a function from a sample space to real numbers.”  This definition is concise, but also can be confusing.
+
+Start by defining the sample space as all possible outcomes of an experiment. Suppose a coin is flipped two times. The sample space would be {HH, TH, HT, TT} where H represents heads and T represents tails. The sample space by itself is difficult to analyze because we don’t have any real numbers to work with. This is why random variables are used; they create a numerical outcome for the experiment. 
+
+For the experiment above, we could assign random variables as X = the number of heads or Y = the number of tails. Both random variables can take the values 0, 1, or 2. The random variable is the function that allows us to take the outcomes of the experiment and describe a relevant numerical result.
+
+Random variables are denoted with upper case letters (X, Y, Z, etc.) and the values the random variables assume are denoted with lowercase letters (x, y, z, etc.). "
+What are common measures of spread in statistics?,"Spread describes how “wide” the dataset is. Two common measures of spread are the five-number summary and the standard deviation.
+
+Calculating a five-number summary requires finding the minimum, maximum, median, and first and third quartiles (the 25th and 75th percentiles). The minimum and maximum tell us the range of the data, and the other three values help draw conclusions about the shape of the data. The five-number summary is often represented visually using a boxplot like the one shown below. It is important to note that the minimum and maximum are calculated using the Interquartile Range (IQR), which is found by subtracting the first quartile from the third quartile. The minimum in our five-number summary is equal to the first quartile minus 1.5 times the IQR. The maximum in our five number summary is calculated by the third quartile plus 1.5 times the IQR. This means that any points that lie beyond the minimum and maximum are represented as points and outliers in the data. The median is at the center of our boxplot.
+
+ [Image: Here we have a horizontal boxplot that shows us the outliers (points beyond the minimum or maximum), as well as the minimum, the first quartile, the median, the third quartile, and the maximum respectively. The boxplot is also able to show us the Interquartile Range, which is the third quartile minus the first quartile.]
+
+Unlike the five-number summary, the standard deviation is a single value.  The standard deviation is interpreted as the average distance between the data points and the mean. Smaller standard deviations suggest that the observed data is closer to the mean.
+
+The standard deviation is calculated using another measure of spread: the variance. The variance is difficult to interpret on its own, but we can find the standard deviation by taking the square root of the variance. The sample variance can be calculated using the equation below, where \(\bar{x}\) is the sample mean, n is the sample size, and the \(x_i\) are all of the sample values.
+
+\[s^2 = \frac{\sum_{i=1}^n (x_i-\bar{x})^2}{n-1}\]
+
+To distinguish between the sample and population variation, we abbreviate the sample variance with \(s^2\) and the population variance with \(\sigma^2\)."
+Where can I find maps of the Miami University Libraries?,"You can use Google Maps to view the Libraries' locations as well as maps of each building:
+
+King Library map - https://goo.gl/maps/Ee43QyMHmzT2
+
+Center for Performing Arts (Amos Music Library) - https://goo.gl/maps/eGJh1HgoWrv
+
+Wertz Art and Architecture Library - https://goo.gl/maps/Fno5vv9NTEy
+
+To see each floor of the building, use Google's zoom feature in the lower right hand corner of each map:
+
+[Image: Google map example]"
+What is the library's street address?,"Oxford Campus
+
+-Amos Music Library: Center for Performing Arts, Room 120, 420 S. Patterson Ave., Oxford OH 45056.
+-King Library: 151 S. Campus Ave., Oxford OH 45056.
+-Wertz Art and Architecture Library: Alumni Hall, Ground floor, 350 E. Spring St., Oxford OH 45056.
+
+
+Hamilton Campus: Rentschler Library: Schwarm Hall, 2nd floor, 1601 Peck Blvd., Hamilton, OH 45015
+
+Middletown Campus: Gardner-Harvey Library: 4200 E. University Blvd., Middletown OH 45042"
+How much does it cost to print in the Libraries?,Printing costs in the Libraries are $0.10/page for B&W and $0.25/page for Color.
+What is P(X = x) for a continuous probability density function (pdf)?,"In order to evaluate a pdf we use integration (unlike a pmf, which uses summation). When you integrate a function over a single value, you will always get zero.  
+
+\[\int_a^a f(x)dx = F(x)|_a^a = F(a) – F(a) = 0\]
+
+This result is not useful. However, we can still integrate pdfs over a range of values to produce useful results. The pdf also tells us the shape of the distribution and is useful for finding cumulative density functions (CDFs)"
+How do I renew books that I have checked out?,Go to My Checkouts at https://holmes.lib.miamioh.edu/patroninfo.html (also a link on the libraries' website) to renew online. Log in with your unique ID and password.
+How do I use categorical predictors in a regression model?,"Categorical predictors <https://libanswers.lib.miamioh.edu/stats-faq/faq/342540?m=p> are represented with dummy (indicator) variables in a regression model. 
+
+Think of a dummy variable as an on/off switch that has a value of 1 when the switch is turned on, and 0 when the switch is turned off. For example, if you want to include gender in a regression model, you could say that the variable has a value of 1 when the subject is female, and a value of 0 when the subject is male. The accompanying coefficient represents the change in the mean response from men to women. Note that the value of the dummy variable changes the location of the intercept but does not change the effect of other variables. 
+
+It is also possible to fit models with categorical predictors that have more than two groups <https://libanswers.lib.miamioh.edu/stats-faq/faq/343632?m=p>."
+What are database search alerts and how do I set them up?,"Search alerts can be set up to provide automatic e-mail notification whenever new search results become available. This can save research time and keep you up to date on your research topics.
+
+These are available in many databases and generally you have to create an account to set them up.
+
+Instructions for specific, popular, databases:
+
+-EBSCO <http://help.ebsco.com/interfaces/EBSCO_Guides/EBSCO_Interfaces_User_Guide/How_to_Use_Search_Alerts> - Many databases
+-Elsevier <https://service.elsevier.com/app/answers/detail/a_id/9832/supporthub/sciencedirect/kw/alerts/> - Science Direct, Engineering Village
+-JSTOR <https://support.jstor.org/hc/en-us/articles/360008128734-Table-of-Contents-TOC-Alerts>
+-Nexis Uni <http://help.lexisnexis.com/tabula-rasa/nexisuni/gh_alerts-topic?lbu=US&locale=en_US&audience=all>
+-Web of Science <https://clarivate.libguides.com/woscc/saving> "
+Can I bring food into the Libraries?,"Yes, food and non-alcoholic beverages are permitted in all Libraries with the exception of the Special Collections and Archives department in King Library. We do ask that you be careful when handling library materials around food and drink.
+
+Please clean up after yourself by using the waste and recycling receptacles located in all of the Libraries.
+
+The King Cafe sells sandwiches, snacks, candy, coffee beverages, and smoothies. Hours are available online at http://www.lib.miamioh.edu/hours/.
+
+Vending machines are located on the ground floor of the Libraries by the King Cafe. "
+Can I take a laptop out of the Libraries?,"No, laptops are for in-library library use only (3 hour checkout period). More information about technology lending and related policies is available online at http://www.lib.miamioh.edu/items-for-checkout."
+"I'm doing a research project, how and where do I start?","A good first step is to articulate your topic. Write it down in a few sentences. Then pick out about three main ideas from those sentences. Brainstorm some related terms or synonyms for those main ideas, which will be your keywords when you go to search for sources.
+
+After you have established your topic and keywords, it's time to pick a database. You can check out the Subject Guides <https://libguides.lib.miamioh.edu/?b=s> that would best fit your topic and see which databases they suggest. You can also go to the Database A-Z List <https://libguides.lib.miamioh.edu/az.php> and narrow it down by subject.
+
+It's best to try several databases as they have different content and advanced search features that can be discipline specific. 
+
+It's important to be flexible and adaptable when searching, as often you get too many results to look through, or too few.
+
+Librarians are happy to talk to you about research so do contact them if you need help at any point in the process. They can be found on the Staff Directory  <https://www.lib.miamioh.edu/people>and the individual Subject Guides <https://libguides.lib.miamioh.edu/>."
+What is the cost of scanning? Where can I scan?,"Scanning is free.
+
+A book scanner is located on the ground, first, and third floors of King Library. Many of the printers throughout the library also function as scanners.  "
+What are some of the different types of hypothesis tests and how do I choose which one to use?,"Here’s a few common tests that are frequently used in an intro statistics class:
+-
+Paired t-test – Paired t-tests are used when you don’t have independent observations. In most cases, this takes the form of a before/after study. For example, you could use a paired t-test to compare heart rates before and after study participants run a mile.
+
+-
+Z-test – This test also assumes all observations are independent. Always use the z-test when analyzing sample proportions. You can also use the z-test to compare sample means when the sample size is greater than 30, or when the sample size is less than 30 but the population is normally distributed, and the population standard deviation is known.
+
+-
+Independent samples t-test – This test assumes all observations are independent. It is used to compare sample means in cases where there are less than 30 observations, the population is normally distributed, and the population standard deviation is unknown. If the sample size is small and not normally distributed, we cannot use the z-test or the t-test.
+
+-
+Chi-Square test – This test differs from the three tests listed above because it is only used to evaluate categorical variables. Click link to learn more about when to use a chi-square test <https://libanswers.lib.miamioh.edu/stats-faq/faq/343100?m=p>."
+What is the difference between an estimate and an estimator?,"These two terms are related. An estimator is a rule or formula used to create estimates.
+
+For example, a common estimator for the population mean is \(\bar{x} = \frac{\sum_{i=1}^n x_i}{n}\). If you had a sample consisting of the numbers 1 to 5, then you could use the above formula to get an estimate of 3.  It is important to remember that while an estimate is just a single number, an estimator is a random variable with its own sampling distribution <https://libanswers.lib.miamioh.edu/stats-faq/faq/336903?m=p>."
+Do the libraries offer 3D printing services?,
+Where can I locate a list of Miami's current journal subscriptions?,"The Libraries' current e-journal subscriptions (as well as available e-books and databases) can be found by browsing or searching Journals by Discipline page <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?profile=pfi>.
+
+There are a limited number of journal subscriptions that the libraries have in print, not electronic. These can be located in the Classic Catalog <https://holmes.lib.miamioh.edu/search/> by performing a title search.
+
+If you want to browse print journal titles, this can be done in the Classic Catalog's Advanced Search <https://holmes.lib.miamioh.edu/search/X>. Select 'material' type as 'periodical/ser' and enter an asterisk (*) as the search word. This should pull up a listing of all journals print and electronic. 
+
+How do you tell which is print and which is electronic? The print journals will have a shelving location and call number letting you know where to find it; the electronic journals won't."
+How can I access the internet via wi-fi in the Libraries?,"In order to connect to the University's wireless access service, your computer will need to have a wireless adapter installed that is Wi-Fi compatible (802.11b or 802.11b/g).
+------------------
+
+Guest Access
+
+
+Guest access does not require a Miami account.
+
+Guest access allows web browsing and is limited to using up to 384 Kbps bandwidth. VPN service using IPSec or Microsoft Windows VPN technology is also open in the Guest access role.
+
+More information about using Miami's Guest Access <http://ithelp.muohio.edu/selfservice/rassp/KPListing/view2.jsp?k2dockey=040972654066507> and what restrictions are in place for VPN service is available in IT Help.
+
+Full Wireless
+
+Full access requires an active Miami account. The MU-WIRELESS network requires proper configuration before it is available to use.
+
+MU Wireless allows full access to MUnet through an encryption standard called 802.1x. For this service to work, you must configure your computer properly. If your card does not support WPA encryption, full access will not work.
+
+VPN can be used for full encrypted access. It provides a comparable level of encryption as 802.1x. 802.1x technology is the industry direction for encryption and is the long-term solution that Miami will support.
+
+Connecting to VPN
+
+-
+Mac & Windows <https://www.units.miamioh.edu/uit/node/983>"
+What is ANOVA and when is it used?,"ANOVA stands for Analysis of Variance. A one-way ANOVA is used to analyze the effect of a factor variable with k levels <https://libanswers.lib.miamioh.edu/stats-faq/faq/342543?m=p> on a numeric response.  For example, if you were analyzing the blood pressure of study participants by gender, you would use a one-way ANOVA with two levels (male and female). The ANOVA will determine if there is a statistically significant difference between the mean blood pressure for male and female participants.  
+
+You can also perform a two-way ANOVA if you need to analyze the effect of two factor variables instead of just one. You would use a two-way ANOVA if you wanted to add whether or not the participant exercised prior to the blood pressure measurement as a factor in the analysis. "
+Does the library offer any special privileges to Honors Students?,"Yes, the Libraries offer these extra privileges to Honors Students:
+
+-Honors/Scholars Study Room: King Library 227 is available exclusively for Honors and Scholars students. Use your ID to enter the room, just as you would your dorm room. If you have trouble entering the room, please see someone at the circulation desk.
+-Extended Checkout Time: You can check out books for a semester at a time. Any Miami book that you borrow from the library will be due on January 30. PLEASE NOTE: Any book may be recalled after you have it checked out for 3 weeks. If you receive a recall notice from the library, you must return the book by the date specified, or fines will incur. "
+Do the Libraries offer 3D printing services?,"Yes. Both mediated service and self-service are located within the Makerspace in King Library (room 303). With mediated service, students, faculty, and staff can submit 3D models to be printed by staff. Charges for this service are located on the 3D Printing Drop-off & Scanning Service LibGuide <https://libguides.lib.miamioh.edu/3dprinting/>. "
+How do I access the Makerspace?,
+Who is the contact for the OER program?,
+What employment opportunities are available in the Libraries?,"All available positions for students, librarians, unclassified, or classified staff are posted on Miami University's Job Search <http://jobs.miamioh.edu/cw/en-us/filter/?search-keyword=&location=oxford%20oh&category=library&job-mail-subscribe-privacy=agree/>. All applications should be submitted through the University site.
+
+Information about Graduate Assistantships are listed on Miami University Libraries' Employment site <http://www.lib.miamioh.edu/libraries-employment>.
+
+ "
+What types of statistical tests should I use with the different data types?,"While the data type <https://libanswers.lib.miamioh.edu/stats-faq/faq/342540?m=p> is relevant in determining what statistical test to use, it’s equally (if not more) important to consider the research context of the problem. 
+
+Suppose you are in charge of two studies. In one study, you want to compare the weights of participants before and after participating in a dieting program. In the other, you want to compare the average weight difference between men and women. In both cases, weight has a numeric (more specifically, ratio <https://libanswers.lib.miamioh.edu/stats-faq/faq/343638?m=p>) data type. However, you would apply a paired t-test in the first study, and a two-sample t-test to the second. The key difference is that in the first study you have two records per participant, and in the second study you only have one. As a result, the data in the first study is not independent. In this scenario, the structure of the study affected the statistical test.
+
+Data type is still an important consideration. Numeric data often results in the calculation of means, which can lead to t-tests and ANOVAs. Categorical data generally results in the calculation of proportions, which can lead to z-tests and chi-square tests. If you are working with categorical data that has more than two groups, the type of test you perform will be affected by whether you have ordinal or nominal data."
+E-resource troubleshooting,"When a problem is reported, gather some information from the patron:
+
+-Is the patron a current Miami University faculty, staff, or student?
+-Students must be currently enrolled in a degree program or course to get access to library e-resources from off campus.
+-Alumni and affiliated/community borrowers do not have access to library e-resources unless they are physically on campus.
+
+
+-What specific e-resource is problematic? Database, e-book, e-journal? Find It link?
+-Where did the user find the problematic link?
+-Classic catalog? If so, ask them to send you a link to the record.
+-Books & More / Articles & More? If so, ask them to send you the permalink to the record. 
+-OhioLINK central catalog?
+-OhioLINK EJC/EBC?
+-Journals A-Z list?
+-Databases A-Z list?
+-LibGuide? If so, which subject and tab was it under?
+-Google Scholar?
+-Other?
+
+
+-Is the user on or off campus <http://libanswers.lib.miamioh.edu/faq/157202>?
+-If off campus, was the user asked to log in via our proxy with their unique ID and password?
+
+
+-Is the user connecting with a wireless connection or a wired connection?
+-What type of computer (PC or Mac) and what browser was being used when the problem occurred?
+-Sometimes resources which use plug-ins involving Adobe products are problematic on Macs.
+-Some resources work better or differently depending on the browser and browser version used.
+
+
+-Did the user receive an error message? If so, ask them to send you a screenshot of the error they're seeing.
+
+------------------
+
+Troubleshooting Basics
+
+-Look up the user's unique ID in the MU directory <https://community.miamioh.edu/phpapps/directory/> (note that the presence of a patron record in Sierra DOES NOT indicate whether they should have access to library e-resources):
+-If their unique ID or name doesn't appear at all, they will not be able to access library e-resources.
+-If the word ""inactive"" or ""expired"" appears by their account in the directory, they have a courtesy account, and need to ask their department chair to renew their courtesy account access with University IT. The libraries cannot do this. 
+
+
+-Check Databases A-Z <http://www.lib.miamioh.edu/databases> or the catalog to see if the e-resource in question has campus or simultaneous user limits.
+-Try to reproduce the problem at your computer to determine whether the problem is isolated to one machine or user, or whether it is system-wide. Sometimes user error can account for problems encountered with e-resources.
+-Try accessing the resource in a different browser like IE, Chrome, Safari, Edge, or Firefox, and see if this resolves the problem. Miami University IT officially supports Chrome.
+-Try clearing the browser cache and cookies, especially for problems with EBSCO e-resources.
+-Ask the patron to disable any browser plug-ins or add-ons that block content like pop-ups, Flash, or JavaScript. These can interfere with library e-resources.
+-Make sure the patron isn't trying to use Miami's VPN to access e-resources. The VPN no longer provides access to library e-resources.
+-Check the vendor/publisher/aggregator's website or social media site (especially Twitter) to see if there is information about product maintenance or problems.
+-EBSCO posts system alerts online at https://status.ebsco.com/.
+-Tech services posts vendor maintenance notices at https://libguides.lib.miamioh.edu/ts/news.
+
+
+-Use a site like Is It Down Right Now? <http://www.isitdownrightnow.com/> to identify whether the entire vendor or product site is down by typing the URL of the database into the box and clicking ""CHECK"".
+-If a browser security error is encountered when trying to access a database, you may still access the resource by clicking on the browser-provided link, usually labeled something like ""proceed"" or ""advanced"".
+
+------------------
+
+Types of Problems
+
+Interrupted access: Sometimes resources are unavailable due to general glitchiness, heavy Internet traffic, a tech problem or downtime for maintenance. Usually a temporary situation, try again in a few minutes. The e-resources librarian may need to contact publisher/vendor about problems of more than momentary nature. Identify the vendor/publisher: vendor may provide info and status reports on their website, e-mail listserv, or Twitter feed to help communicate known access problems.
+ 
+Authentication problem: Off-campus: Patron may not be a current Miami University faculty, staff, or student, which means they won't be able to access library e-resources. On-campus: If IP address information is incorrect at the vendor side, a database or e-resource may stop recognizing Miami University internet traffic and not allow access to the resource from on-campus users. Contact the e-resource librarian if you suspect this problem.
+ 
+Subscription problem: Subscription status is incorrectly classified as “on hold” or canceled by publisher/aggregator, resulting in loss of access. This sometimes happens in January or June as renewals are processed by publishers. E-resources librarian may need to contact subscription agency, consortia rep or other vendor rep in order to provide proof of payment to publisher.
+ 
+Invoice/Payment problems: For locally subscribed e-resources, e-resources librarian can check Sierra order records to make sure we have paid for the resource in the current fiscal year. There are a handful of vendors who are erratic about sending us renewals before expiration, and some of these vendors turn off access automatically even if we never received an invoice from them.
+ 
+Subscription content discrepancies: Volumes/years listed as available by publisher differ from those believed to be included with library’s subscription. It's usually necessary for the e-resources librarian to contact the publisher in order to clarify available content for a given sub. The librarian can also check our order records in Sierra and EBSCOnet.
+ 
+Remote access issues: Off-campus access problems occur with EZProxy access--this is sometimes the result of user error, but can be the result of a missing configuration in our EZProxy configuration file. Contact the e-resources librarian if a resource is working incorrectly from off campus. Please note: as of 2016, library resources can no longer be accessed using the VPN. All off-campus access must go through the proxied links in the catalog or A-Z list in order to work correctly. 
+ 
+OpenURL link resolver issues: EBSCO Full Text Finder (Find It!) does not take users to the correct article or other citation. Possible causes may include incorrectly reported holdings in the FTF holdings management tool, improperly formatted metadata on the aggregator or publisher site, or an incorrect article citation, among others. Contact the e-resources librarian to report problems with the Find It! options.
+ 
+Browser/OS compatibility issues: Issues may includes old or new versions of browsers or operating systems (Mac versus Windows) as well as browser plug-ins, add-ons, and extensions. Best to ask what browser and OS the user is working from and go from there. When in doubt, try multiple browsers like Chrome, Firefox, Edge, Safari, and IE.
+ 
+Problems opening a PDF: Client receives a blank screen or error message when attempting to download a PDF. May require an upgrade to latest version of Adobe Acrobat and/or Web browser. If version compatibility is not an issue, clearing the browser’s cache may resolve problem.
+ 
+Web browser not set to accept cookies: Client may receive an error message until the browser is configured to accept cookies, which are used to authenticate and track specific user information.
+ 
+Missing content: Articles from individual issues or entire issues are missing online. Ask the e-resources librarian to investigate the problem and report to vendor/publisher. Then direct patrons to ILL or other alternatives since missing content may not be resolved immediately."
+What is SWORD?,"The Southwest Ohio Regional Depository (SWORD) is specially designed for the remote storage of permanently held, little used library materials from the library collections of Central State University, Miami University, the University of Cincinnati, and Wright State University. The depository, located on Miami University's Middletown Campus, is one of five such facilities to be constructed in the State of Ohio with funding from the Ohio Board of Regents.
+
+SWORD is designed and constructed to provide the cooperating libraries with an excellent preservation environment for storing materials in an economical, high-density shelving system. SWORD is comprised of two 30-foot tall storage modules, the first opening in September 1994 and the second in 2000. The windowless storage modules have a capacity of two million volumes and maintain temperatures and relative humidity between 58 degrees and 40% in the winter and 65 degrees and 50% in the summer. Materials housed in the modules are shelved by size and located by barcode.
+
+Items in the depository may be requested through catalogs of the cooperating libraries (Miami University, University of Cincinnati, Wright State University, Central State University) or through the OhioLINK catalog.
+
+Southwest Ohio Regional Depository is located at:
+4200 N. University Blvd.
+Middletown, OH 45042
+p: 513.727.3474
+Email: sword@miamioh.edu <mailto:sword@miamioh.edu>"
+What is the sampling distribution for a statistic?,"When you collect multiple samples from the same population, you will get a variety of sample statistics. If you survey two different groups of women about their age, you will most likely not get the same mean age for each sample.
+
+You can use a sampling distribution to describe the distribution of the statistic if a large number of samples were taken. In other words, the statistic is a random variable <https://libanswers.lib.miamioh.edu/stats-faq/faq/336890/?m=p> with its own probability distribution. For example, the sampling distribution of the sample mean \(\bar{x}\) can be written as \(\bar{x} \sim N(\mu, \sigma^2/n)\), where \(\mu\) is the population mean, \(\sigma^2\) is the population variance, and n is the sample size. Having knowledge about the sampling distribution is very useful when performing statistical inference."
+How do I find the probabilities of the different values assumed by random variables?,"There are two different types of functions used to mathematically find probabilities: probability mass/density functions and cumulative density functions.
+
+Probability functions are defined mathematically as \(f_X(x) = P(X = x)\), where X is a random variable and x is a real number. Probability mass functions (pmfs) are used for discrete random variables and probability density functions (pdfs) are used for continuous random variables. This distinction is made because discrete and continuous random variables <https://libanswers.lib.miamioh.edu/stats-faq/faq/343628?m=p> have different ranges.
+
+Cumulative density functions are defined mathematically as \(F_X(x) = P(X \leq x)\), where X is a random variable and x is a real number). The CDF can be found by integrating the pdf of a continuous random variable, or by summing the pmf of a discrete random variable for all values less than or equal to x.  The pdf/pmf is also the derivative of the CDF."
+What are assumptions and why are they important?,"Assumptions are characteristics of the data that you verify are true before performing statistical analysis. They are also sometimes referred to as diagnostics. Assumptions are important because if the requirements for an analysis are not met, the results of that analysis may be misleading or incorrect. For this reason, assumptions should always be checked prior to performing statistical inference."
+What support do the libraries provide to faculty who are interested in incorporating makerspace technology into courses?,
+How do I access the Makerspace?,
+Graduate Student and Project Dragonfly staff/student access to e-resources,"Some graduate students (including many Project Dragonfly students) are unable to access library e-resources when they are not enrolled in any actual courses (even though they may be enrolled in or ""a student in"" a given program). This includes grad students who are working on their dissertations or theses but not currently enrolled for credit hours. The workaround for these students to access library e-resources is for them to obtain a University IT Services Courtesy Account.
+
+Students need to contact their home department to obtain or renew this; their dean or dept chair or designee will need to fill out a Courtesy Account request form at https://www.apps.miamioh.edu/accounts/accrequest
+
+For Project Dragonfly, the STUDENT must contact the program coordinators, specifically Connie Malone, directly to arrange this:
+
+Ms. Connie M. Malone
+malonecm@miamioh.edu
+(513) 529-5103
+
+Note that students in this situation may still be able to use other authorized resources like Miami email, or other resources not tied to central authorization like Sierra, and Dragonfly students may not even show in the University directory.  If they are not currently enrolled in a class in session, the solution to refer them to their home department is the same."
+Does the library have a makerspace?,
+Where can I find information about Miami University Libraries Special Collections and Archives?,"The Walter Havighurst Special Collections holds over 82,000 volumes, including rare books, manuscripts, and special subject collections. Collection strengths include: the history and culture of the Ohio Valley/Old Northwest Territory; the history of transportation, especially in the 19th century; the American Civil War; pre- and post-revolutionary Russian history, art and literature; William Holmes McGuffey and his Readers; 19th century gift books; and children’s literature, especially the 18th through the 20th centuries, including 19th century schoolbooks. Cataloged materials in the Special Collections & Archives may be searched through the library catalog <http://www.lib.miamioh.edu/>. For manuscript collections, please see the finding aids on the individual collection pages <http://spec.lib.miamioh.edu/home/collections/>.
+
+The archives are comprised of three archives: the Miami University Archives, which contains manuscripts, publications, photographs, and artifacts dealing with Miami University history; the Western College Memorial Archives, which holds materials from the Board of Trustee records dating back to 1853; and the Oxford College Archives, which documents the history of the women’s college. Archival records may be accessed online through our ArchivesSpace instance <http://archivesspace.lib.miamioh.edu/>.
+
+The Walter Havighurst Special Collections are primarily intended for the use of students and faculty at Miami University but researchers outside the University are welcome. All users are required to complete a brief registration procedure and present valid photo identification (e.g., driver’s license, student ID, etc.). Prior arrangements are not necessary before coming to Special Collections, but researchers from out of town are encouraged to contact staff in advance to confirm hours and the availability of materials. Special Collections is a closed-stacks library. All requested materials are retrieved by staff and may be used only in the Special Collections Reading Room. A Reading Room attendant is available to assist researchers and ensure the proper use of the materials.
+
+For questions about class visits, digital resources, and gifts/donations, contact William Modrow. <mailto:modrowwm@miamioh.edu>
+
+Hours
+8:00 am - 5:00 pm 
+Monday - Friday
+321 King Library
+
+Contact
+Special Collections
+(513) 529-3323
+SpecColl@miamioh.edu <mailto:SpecColl@miamioh.edu>
+
+Archives
+(513) 529-6720
+Archives@miamioh.edu <mailto:Archives@miamioh.edu>"
+What is a random variable?,"The formal mathematical definition of a random variable is “a function from a sample space to real numbers.”  This definition, while concise, can also be confusing.
+
+Start by defining the sample space as all possible outcomes of an experiment. Suppose a coin is flipped two times. The sample space would be {HH, TH, HT, TT} where H represents heads and T represents tails. The sample space by itself is difficult to analyze because there are no real numbers to work with. This is why random variables are used; they create a numerical outcome for the experiment.
+
+For the experiment above, random variables could be assigned as X = the number of heads or Y = the number of tails. Both random variables can take the values 0, 1, or 2. The random variable is the function that takes the outcomes of the experiment and describes a relevant numerical result.
+
+Random variables are denoted with upper case letters and the values the random variables assume are denoted with lowercase letters."
+What services are available for Affiliated Patrons of the Libraries?,
+Who should I contact if I have a copyright question?,"Please direct copyright questions to the Libraries' Coordinator of Scholarly Communication:
+
+Carla Myers
+(513) 529-3935
+myersc2@miamioh.edu <mailto:myersc2@miamioh.edu>"
+How do I reserve a library classroom or other non-study room?,"Library study rooms may be reserved <https://libanswers.lib.miamioh.edu/faq/163332> by any Miami student, faculty, or staff member.
+
+Library classrooms (Kamm, AIS) and other internal meeting rooms (room 228, 320) are reserved for the use of the staff of the Libraries and their partners.
+
+To inquire about exceptions, please contact the Libraries at (513) 529-4141."
+Where can I find information on research metrics?,"General information about research metrics, including journal impact factors and other research impact tools like Ulrich's, Cabell's, Google Scholar, and Publish or Perish can be found on our Journal Citation Reports and Other Research Impact Tools guide <http://libguides.lib.miamioh.edu/dossier>.
+
+Links to specific metrics:
+
+-Journal Impact Factors - InCites  <http://www.lib.miamioh.edu/indexes/redirect/1271>Journal Citation Report <http://www.lib.miamioh.edu/indexes/redirect/1271>s database <http://www.lib.miamioh.edu/indexes/redirect/1271>
+-Plum Analytics <https://plumanalytics.com/>
+-Altmetircs <https://www.altmetric.com/>
+-Eigenfactor <http://eigenfactor.org/>
+-h-Index <https://arxiv.org/abs/physics/0508025>"
+Is there a cost for using the Makerspace?,
+How can alumni and other donors support the Miami University Libraries?,"Before Miami University had a campus, it had the start of a library. While the role of the Miami University Libraries has evolved throughout the university’s history, the Libraries have maintained a central presence in Miami’s student experience, spanning academic disciplines and generations of committed, hard-working students.
+
+Whether in pursuit of academic excellence in the classroom, a research passion that goes beyond the classroom, or simply a place of peace and reflection, Miami’s students still find a welcoming and supportive community in the Miami University Libraries. Your giving advances that tradition, ensuring students have access to the knowledge, resources, spaces and personalized guidance that contribute directly to their academic and life success.
+
+While a number of funds generously support and enhance the Miami University Libraries, we encourage you to consider four priority areas <http://www.givetomiamioh.org/s/916/16/interior-flah.aspx?sid=916&gid=1&pgid=5141>:
+
+-The Dean’s Fund - This unrestricted fund creates the flexibility for the Dean and University Librarian to ensure the University Libraries are responsive in anticipating and meeting the needs of students and faculty.
+-Technology Support - From technology basics that not all students can afford, like iPads and laptop computers, to advanced technologies, like cutting-edges computer laboratories, recording studios and 3D printing, the Miami University Libraries are a campus leader in offering access to the technologies students need to thrive in a digital world.
+-The Textbook Initiative - According to a recent College Board report, today’s students spend approximately $1,200 a year on textbooks and supplies. Today’s Miami University Libraries, offer access to more than 500 textbooks from Miami’s most popular courses, ensuring students can complete textbook assignments regardless of their ability to afford a textbook.
+-Special Collections & Archival Collections - From rare Shakespeare folios to accounts of early settlers and the Cradle of Coaches collection, the Walter Havighurst Special Collections and university archival collections—encompassing the histories of Miami University, Western College and Oxford College—serve as an invaluable laboratory for the humanities at Miami University. Donor support grows, preserves and promotes these treasured collections that awe and inspire our students.
+
+
+For more information, please contact:
+Michael Kumler '97
+Director of Development
+(513) 529-1957
+kumlerme@MiamiOH.edu​ <mailto:kumlerme@MiamiOH.edu​>"
+Why should I find a confidence interval instead of only using a hypothesis test?,"The advantage of a confidence interval <https://libanswers.lib.miamioh.edu/stats-faq/faq/342533?m=p> is that it gives you a range of possible values and provides a measure of variability. A hypothesis test <https://libanswers.lib.miamioh.edu/stats-faq/faq/343102?m=p> only looks for statistical significance.  For example, you could run a hypothesis test to determine if the mean for a given variable is zero. If the test is significant, you still don’t know any information about the true mean other than it isn’t zero. If you fit a confidence interval, then you would have a range of values that you are reasonably confident the true mean will fall into.  You can also use the confidence interval to evaluate a hypothesis test. Continuing with the above example, if the confidence interval did not include zero, you would reject the statement that the mean is equal to zero."
+"What is the difference between factors, factor levels, and treatments?","Factor is another way of referring to a categorical variable <https://libanswers.lib.miamioh.edu/stats-faq/faq/342540?m=p>. Factor levels are all of the values that the factor can take (recall that a categorical variable has a set number of groups). In a designed experiment, the treatments represent each combination of factor levels. If there is only one factor with k levels, then there would be k treatments. However, if there is more than one factor, then the number of treatments can be found by multiplying the number of levels for each factor together. 
+
+For example, say you have two factors, exercise type and post-exercise snack. Exercise type has four levels (running, swimming, weightlifting, kickboxing) and snack has three levels (banana, granola bar, protein shake). If we multiply 4 by 3, we get 12 treatments, which can be represented as follows:
+
+ 
+
+[Image: Here is a table showing each of the 12 treatment combinations of the two factors. Treatment 1 is characterized by being a combination of running for exercise type and banana for post exercise snack. The remaining 11 treatment are similarly characterized, each having their own unique combination of factor levels for each factor.]"
+What are the hours for the VR lab?,
+Where can I find information about events and exhibits at the Libraries?,Current and upcoming events and exhibits at the Miami University Libraries are available online at http://www.lib.miamioh.edu/library-events.
+"The Libraries have a copy of the book I need, but it's checked out.","Search the OhioLINK tab from the Libraries' homepage at http://www.lib.miamioh.edu/.
+
+If you find a copy in the OhioLINK catalog <http://olc1.ohiolink.edu/search>, you can use the Green ""request"" button to have it sent to Miami University for pick-up at any of the Libraries' circulation desks.
+
+You may also search in the SearchOhio catalog <http://ohpir.westervillelibrary.org/> if the item you're looking for is not in the OhioLINK catalog. Use the green ""Request"" button to have it sent to Miami University for pick-up at any of the Libraries' circulation desks.
+
+It may also be helpful to check the Lane Public Library catalog at https://www.lanepl.org/."
+How do I interpret a confidence interval?,"When interpreting a confidence interva <https://libanswers.lib.miamioh.edu/stats-faq/faq/342533?m=p>l, say that “We are __% confident that the population parameter (mean, proportion, etc.) falls between __ and __.  It may seem more intuitive to say that there is a 95% probability that the interval contains the true parameter, but this is incorrect. The confidence level doesn’t describe the probability of one interval containing the parameter; instead it’s a statement about the overall percentage of intervals containing the parameter if we found intervals for a large number of samples."
+"I'm doing a project that I need primary sources for, what are they and where do I find them?","Broadly speaking primary sources are items that are directly associated with their producer or user (consumer) and the time period in which they were created. Primary sources can be printed (such as books written in the 18th century or newspapers or a published novel), can be manuscripts (such as diaries), public or official records (such as laws or treaties), architectural drawings or city plans,  paintings or other forms of artwork, images, or objects (such as clothing or an early automobile).
+
+The Primary Sources Guide <https://libguides.lib.miamioh.edu/c.php?g=987081&p=7139084> is a great place to find databases and websites where you can locate primary sources."
+What genealogical resources are available to me?,"Public libraries more often have genealogy resources than academic libraries, so check with your local public library. They may have special database access such as Ancestory.com and Heritage Quest.
+
+There are also some free websites for genealogy research.
+
+-Butler County Genealogy Society <https://butlercountyogs.org/>
+-Ohio Death Record Index Search <https://resources.ohiohistory.org/death/>
+-Ohio Memory <https://www.ohiomemory.org/>
+-Records and Archives of Butler County Ohio <http://www.butlercountyohio.org/records/>"
+Which databases are available through the Libraries?,"An alphabetized list of databases offered by the Libraries is available online at http://www.lib.miamioh.edu/databases. 
+
+Click the blue-green ""Connect to"" button below each database to access these resources from on or off campus."
+"When performing a regression analysis, what is a prediction interval and how is it different from a confidence interval?","Prediction intervals are used to predict a single future response given a set of predictor values. This is different from confidence intervals <https://libanswers.lib.miamioh.edu/stats-faq/faq/342533?m=p>, which are used to predict the mean response for a given set of predictor values. Suppose we have built a model that predicts resting blood pressure in women based on their age. You could find a confidence interval for the mean blood pressure of all 50-year-old women, and the prediction interval for the blood pressure of an individual, unobserved 50-year-old woman.
+
+Prediction intervals will always have a larger standard error than confidence intervals for the same data. With both confidence and prediction intervals, there will be uncertainty due to the model fit itself (we do not know the true values for the intercept or parameters in a linear model are unknown). However, with prediction intervals, you also have uncertainty due to the differences between individuals. In other words, different 50-year-old women will have different resting blood pressure measurements."
+What is a confidence interval?,"A confidence interval gives you a range of values that you believe the population parameter <https://libanswers.lib.miamioh.edu/stats-faq/faq/336901?m=p> falls in.  Often you will be asked to find a \(100(1-\alpha)%\) confidence interval, where \(1- α\) is a quantity between 0 and 1 that represents the level of confidence. The confidence level is used to determine how often the true parameter falls within the confidence interval.  For example, if \(1-\alpha= 0.95\) , you have a 95% confidence interval. This means that, if we calculate intervals for a large number of samples, the true parameter falls in approximately 95% of the intervals."
+How can I use files stored on my personal computer within the virtual PC?,"Miami students all have access to network file storage provided to them by the university.  This network file storage is already visible in the virtual PC. If you set up the network file storage to be visible from your personal computer, then you can copy the files from your personal computer into the network drive and edit them within the virtual PC. Steps are provided below:
+-Download the Cisco AnyConnect VPN using the instructions for Windows <https://miamioh.teamdynamix.com/TDClient/1813/Portal/Requests/ServiceDet?ID=9022> or for Mac <https://miamioh.teamdynamix.com/TDClient/1813/Portal/Requests/ServiceDet?ID=8897>, depending on your operating system.
+-Open Cisco AnyConnect (search in Start or Applications) and login with Miami credentials. You will need to use two-factor identification. If the login isn’t sending a push to your phone, follow Step 3.
+-Open Duo and click Miami University. You should see a 6-digit code. For the Cisco AnyConnect password, enter your Miami password, then a comma, then the 6-digit code you found in Duo.
+-Connect to Network File Storage. The method for this differs between Windows <https://miamioh.teamdynamix.com/TDClient/1813/Portal/KB/ArticleDet?ID=9161> and Mac <https://miamioh.teamdynamix.com/TDClient/1813/Portal/KB/ArticleDet?ID=6208>, so select the link for your operating system and follow the instructions provided.
+-Look at your File Explorer. You should now see links for the network storage drives. If you don’t see your own personal network storage in one of the links, follow Step 6.
+-Click MyFiles. You'll see folders for every letter of the alphabet. Pick the one that's the same letter as the first letter of your uniqueID. Now you should be able to see your network file storage locally.
+-In the virtual PC, click This PC. Under Devices and Drives you will see a drive labeled with your unique ID. This is the same network storage space that you set up on your local machine.
+
+Every time you use network storage on your local machine, you will have to log in to Cisco AnyConnect.  This connects you to the Miami VPN so you can access your files. Also, as a student you have limited storage space in the network. If you're working on a project that requires large amounts of storage, you may need to use a software that can be run locally on your machine."
+How many times can a library book be renewed?,
+What are the hours for the VR lab?,
+How do I set up a hypothesis test?,"There are three items you need before performing a hypothesis test:
+-
+Null Hypothesis (\(H_0\)): This is the “default” hypothesis for the parameter. You are trying to disprove this. It should always include “=”.
+
+-
+Alternative Hypothesis (\(H_A\) or \(H_1\)): This is what you want to show. It should include “<”, “>”, or “\(\neq\)”.
+
+-
+Significance Level: This is the probability that you reject the null hypothesis when the null is actually true (also called false positive rate or Type I error). It is often notated with the Greek letter \(\alpha\). You can adjust the significance level based on how confident you want to be in the results. Smaller significance levels result in greater confidence.
+
+
+ "
+Which campus partners have space in the Libraries?,"In King Library:
+
+-Interactive Media Studies Classroom/Lab - IMS (ground floor)
+-King Cafe (ground floor)
+-Miami University Police Department (ground floor)
+-eSports Arena (first floor)
+-Howe Writing Center (first floor)
+-Office of Research for Undergraduates - ORU (first floor)
+-Center for Digital Scholarship - CDS (third floor)"
+How do I check the assumptions for a linear regression model?,"Although numeric tests exist for these assumptions, typically it is easiest to evaluate them graphically. 
+-
+Independence: Are the error terms independent? Assuming your data was collected through a “well designed experiment or a simple random sampling scheme with one observation per subject”, this assumption is met.  
+
+-
+Constant variance: Is the variance of the error terms constant? In other words, does the size of the predicted value affect the variance? You can use the residuals vs. fitted plot to check this assumption. If there is any kind of pattern (i.e. fanning effect) in the plot, this assumption might not be met.
+
+-
+Normality: Are the error terms are normally distributed? Evaluate this assumption by checking a Q-Q plot. If the points on the Q-Q plot fall near the line, this assumption is met.
+
+-
+Linearity: Is a linear model a good fit for this data? If the trendline in the residuals vs. fitted plot is horizontal, this assumption is met.
+
+-
+Unusual Observations: Do you have high leverage points (extreme in X) or outliers (extreme in Y)?  For outliers, consider if points fall within three standard deviations of the mean. For high leverage points, consider the trendline in the scale location plot. It will be roughly horizontal if there are no high leverage points."
+How is ANOVA related to other statistical methods?,"If the factor variable <https://libanswers.lib.miamioh.edu/stats-faq/faq/342543?m=p>  in a one-way ANOVA only has two levels, then it is the same as an independent samples t-test <https://libanswers.lib.miamioh.edu/stats-faq/faq/343102?m=p> . However, unlike a t-test, an ANOVA can be used when the factor has more than two levels. A one-way ANOVA is also the same as a regression model with one predictor that is a factor variable. The only difference is how the results are presented. For example, if the factor in a one-way ANOVA had multiple levels and was a significant, you would need to perform multiple comparisons to determine which levels were significant. Regression does not require follow-up analyses involving multiple comparisons."
+How do I perform a chi-square test?,"There are actually multiple types of chi-square test <https://libanswers.lib.miamioh.edu/stats-faq/faq/343100?m=p>. The two we will focus on are the chi-square test for homogeneity and the chi-square test for independence (also sometimes called the test for association).  Both tests require two categorical variables; the difference lies in what we are testing for and the characteristics of the underlying population(s).
+
+In a chi-square test for homogeneity, we are comparing whether two distinct populations have the same distribution. The null hypothesis is that the two populations have the same distribution, and the alternative hypothesis is that they have different distributions. For example, we would use a test for homogeneity to determine if the distribution of cat ownership is different between the male and female populations.
+
+In a chi-square test for independence, we are testing the relationship between two variables within one population. The null hypothesis is that the two variables are independent (not related) and the alternative hypothesis is that they are dependent (related) For example, we would use a test for independence to test whether people who own a dog are more likely to also own a cat.
+
+While the hypotheses and conclusions for these tests are different, the results are calculated using the same formula:
+
+ 
+
+\[X_c^2 = \frac{\sum (O_i - E_i)^2}{E_i}\]
+
+ 
+
+The chi-square statistic is found using the difference between the observed value Oi and the expected value Ei for each entry in the contingency table. A p-value can also be calculated to determine the statistical significance of the result."
+What type of digital scholarship projects do you support?,
+What is predatory publishing?,"Predatory publishers are those that unprofessionally exploit the gold open-access model for their own profit. They offer to quickly publish an article, so long as the researcher pays a fee. Many predatory publishers claim to enforce peer review but instead publish articles immediately upon receipt of author’s fees.
+
+For more information including how to determine if a journal is predatory, see the LibGuide on Copyright and Publishing <https://libguides.lib.miamioh.edu/c.php?g=340133&p=2289461>."
+How do I search for patents?,"The USPTO <https://www.uspto.gov/> is the US Patent & Trademark Office and the EPO <https://www.epo.org/> is the European Patent Office; two of the world's largest patent offices. 
+
+Their sites used to search have special names and address - PatFT  <http://patft.uspto.gov/netahtml/PTO/search-bool.html>for U.S. and Espacenet <https://worldwide.espacenet.com/> for E.U. 
+
+These are quite different to conduct searches in than library databases, so ask for help if you need it.
+
+You can find more information and links on the Patents page of the Chemistry and Biochemistry Guide <https://libguides.lib.miamioh.edu/chemistry_biochemistry/patents> - one of several disciplines that use patents frequently."
+What is the difference between Type I and Type II error?,"The following chart is often provided to explain type I and type II Error. \(H_0\) represents the null hypothesis, and \(H_1\) is the alternative hypothesis.
+
+[Image: The chart here shows a two by two table, where the two columns represent reality, where the null hypothesis is actually true, or the alternative hypothesis is actually true. The rows represent the test conclusions, do not reject the null, and reject the null. Each cell represents either a type of error or a correct conclusion. For example, when the null hypothesis actually true, and the conclusion was to reject the null, this is type one error. On the contrary, when the alternative hypothesis is actually true, but we do not reject the null, this is type two error. The last two cells represent correct conclusions.]
+
+Type I error can also be thought of as the rate of false positives, and type II error is considered the rate of false negatives. The rate of false positives is represented by \(\alpha\) (the significance level).
+
+While no type of error is desirable, you can’t decrease the likelihood of one type without increasing the likelihood of the other. When thinking about error, it is useful to think about which type is worse in the context of the experiment. For example, if you are developing a diagnostic test for a deadly disease, it would be better to falsely diagnose a healthy person with the disease (type I error) than fail to diagnose a sick person who will die from the disease (type II error)."
+What are the assumptions for a linear regression model?,"There are five assumptions: independence, constant variance, normality, linearity, and unusual observations.  The first three assumptions all describe the error term in the model. Linearity means that a linear model is the best fit for the data (i.e. the structure of the model matches the trend in the data). Unusual observations are records that are considered “extreme” in some way."
+I have a link to an article and it's not working. What is going on?,"The are numerous reason why this might be the case.
+
+Very frequently however, it's because the link was obtained from the address bar of the internet browser while someone was looking at the article. In library databases, using this link, even on the same computer not long after initially found, won't work because it's tied to the current session.
+
+Therefore in most databases there will be a permalink feature. Permalinks, sometimes called shareable links or stable links, are permanent and will work later for the original searcher and others it's shared with.
+
+The icon for obtaining the permalink varies across databases - see attached file for some screen shots.
+
+Unfortunately the solution for a 'fixing' the link is to find the article again using any citation information you have for it, including the title, author, year, journal, doi or other details. "
+Accessing front page of New York Times for birth date,"You can get the front page of the NYT for your birth date by using the New York Times Historical database from ProQuest.
+-Go to Databases A-Z at http://www.lib.miamioh.edu/databases.
+-Under N http://www.lib.miamioh.edu/databases/N.
+-Scroll down to New York Times Historical and click on Connect to New York Times Historical at http://www.lib.miamioh.edu/indexes/redirect/791.
+-Under ""Publication date"" (in Advanced Search), choose ""On this date"".
+-Choose the month, day and year of your birthday from the dropdown boxes.
+-Under ""More Search Options"", ""Document type"", choose ""Front page article"".
+-Click ""Search"".
+-Open any article that appears in the search results.
+-Click the ""Page view - PDF"" tab.
+-Download the PDF using ""Download Page PDF"" link on the right.
+-If a student is making a hard copy they'll likely want to use 11x17"" paper, and ""Fit to Page."""
+"This chat ticket is just spam, what should I do?","If it's in the queue and hasn't been claimed yet...
+
+-Use the eyeball icon to take a ""quick look"", it's located just after the ticket title
+-Clicking it gives us a pop-up read of the ticket without claiming it.
+-If the ticket is spammy, click the circle-slash spam button next to the trash can. 
+-It only appears if the ticket is unclaimed.
+-See attached screenshot for where and what this looks like.
+
+
+
+
+If you've claimed the ticket already, then un-claim it, and follow the steps above to mark it as spam. To un-claim it...
+
+-Once the ticket page is open, up at the top where it has your name is a button to ""un-claim"". Click this.
+-Then go back to the Dashboard and use the circle-slash spam button.
+
+
+Reviewing spam... 
+
+-Spam-marked tickets are segregated to a ticketing tab marked ""Spam."" There you can, in turn, review spam-marked tickets and mark tickets with the Not Spam button if a ticket accidentally gets caught there.
+
+
+If there are abusive or severe spammy offenders, we also have the ability to totally block specific email addresses or domains. Contact Jerry on how to do this."
+Safari e-books,"The Safari e-books platform changed in December 2018. Links to e-books on the old platform no longer work and do not re-direct. 
+
+To locate the new URL for a Safari e-book, search for the specific book title in the Online Resources A-Z list <https://proxy.lib.miamioh.edu/login?url=https://search.ebscohost.com/login.aspx?profile=pfi> or browse the new Safari platform at https://miamioh.edu/ <https://miamioh.edu/safarionline>safarionline <https://miamioh.edu/safarionline>.
+------------------
+
+-Safari e-books are negotiated and leased by OhioLINK on behalf of the entire consortium, so we have no control over any aspects of the package.
+-Safari e-books are not purchased but are leased--they can leave the Safari platform at any time, with almost no warning as package and publisher agreements change. We receive updated bibliographic records for titles removed from Safari on a quarterly basis. 
+
+
+Sometimes the catalog is a few weeks behind when items actually appear on these platforms, so I suggest you search these e-book platforms independently if you don't find a recently published Wiley or Springer title in the catalog:
+ 
+Wiley Online Library
+http://proxy.lib.miamioh.edu/login?url=http://onlinelibrary.wiley.com/
+ 
+Springer
+http://proxy.lib.miamioh.edu/login?url=http://link.springer.com/"
+Software lists,Updated software lists can be requested prior to fall and spring semester from Bryan Partner (partneba@miamioh.edu <http://partneba@miamioh.edu/>). 
+Library maps,A map of the Oxford campus library locations is available online at http://rocket.lib.muohio.edu/maps/librarylocationsmap.pdf.
+How can I access Cataloger's Desktop?,See link below. Miami's subscription allows for 9 simultaneous users and is not IP authenticated. Contact Jennifer Bazeley for a username and password.
+E-resource problem reporting,"During business hours (M-F / 8 am - 5 pm):
+
+Report via the form at http://libguides.lib.miamioh.edu/ts/ <http://libguides.lib.miamioh.edu/ts/reportproblems>reportproblems <http://libguides.lib.miamioh.edu/ts/reportproblems> or contact Jennifer Bazeley <mailto:bazelejw@miamioh.edu> (9-4216).
+------------------
+
+For urgent problems after hours:
+
+Please use the MU Libraries Feedback Form <http://www.lib.miamioh.edu/feedback/>.
+------------------
+
+If you have identified an issue with a resource that you are certain is an OhioLINK resource (outage or missing content), you may also use OhioLINK's Request Support <https://www.ohiolink.edu/content/request_support> forms."
+Accessing EBSCO e-books,"EBSCO e-books can be read online on your computer or laptop or you can read them using the Ebsco e-book app on a tablet or other mobile device. Please note that many EBSCO e-books are single user e-books, so if someone else is using one, you won't be able to access it yourself until the other person is finished with it.
+
+To read on your computer or laptop (PDF):
+-Search for the ebook on Ebsco: http://www.lib.miamioh.edu/indexes/redirect/937
+-Click the ""PDF Full Text"" link on the left pane or click ""Download this eBook"" (this option requires you to install Adobe Digital Editions on your computer).
+
+To use the Ebsco ebook mobile app:
+-Download the EBSCO eBooks app from Google Play (https://play.google.com/store/apps/details?id=com.ebscohost.reader&hl=en) or iTunes (https://itunes.apple.com/us/app/ebsco-ebooks/id1022041769?mt=8)
+-Find your library and sign in to access their collection
+-Search and browse to find the titles you're interested in
+-Download an EBSCO eBooks by clicking on the ""Download"" link on the search result page or from within the detailed record
+-Select your preferred checkout period and click Checkout & Download
+-The title automatically opens in the EBSCO eBooks app
+-Begin reading the title in the app, bookmark your place for later and return it to the library's collection when finished"
+Technical Services LibGuide,"MUL e-resources can be accessed by off-campus students via the Library’s proxy server.
+
+Proxy Server (EZProxy)
+
+All faculty and students are strongly encouraged to access library e-resources through the proxied links found in the library catalog, A to Z lists, and LibGuides. This ensures that they will be able to access resources whether they are on or off campus.
+
+The proxy prefix is https://proxy.lib.miamioh.edu/login?url=
+
+You can add the proxy prefix to any subscribed e-resource link to ensure off-campus access.
+
+Example of a proxied link:
+
+https://proxy.lib.miamioh.edu/login?url=http://www.jstor.org/stable/10.5951/mathteacher.108.5.0376
+
+Proxy Errors
+
+If you identify a proxied link that does not work from off-campus, please notify Jennifer Bazeley <mailto:bazelejw@miamioh.edu>.
+
+Re-Direct URLs
+
+Re-direct URLs found in Databases A to Z <https://www.lib.miamioh.edu/databases> and the Online Resources A to Z LibGuide <https://libguides.lib.miamioh.edu/az.php> that begin with https://www.lib.miamioh.edu/indexes/redirect/ do NOT require the proxy prefix.
+
+These URLs automatically push patrons through proxy authentication without the prefix."
+How can I check the status of a request (Interlibrary Loan),"Information about ILL requests is not available in the catalog.
+
+Sheila Sparks, Don Morner, and Rob Withers are able to view the status of past, pending, and filled interlibrary loan requests. Contact them at mia-ill@lib.muohio.edu ."
+Login information,"Cisco Voicemail
+
+Password: 3456789#
+------------------
+
+Gmail Reference
+
+Email: libreftest@gmail.com <http://libreftest@gmail.com>
+
+Password: lookitup
+------------------
+
+LibraryH3lp
+
+http://libraryh3lp.com/webchat
+
+Username: [your unique ID]
+
+Password: [assigned to you by Library Systems, systems@lib.muohio.edu <http://systems@lib.muohio.edu>]
+------------------
+
+LibStats
+
+http://beta.lib.muohio.edu/libstats/questionAddForm.do
+
+Username: mulibraries
+
+Password: mulibraries
+------------------
+
+Pinterest
+
+Email: miamiulibraries@yahoo.com
+
+Password: lookitup
+------------------
+
+Skype
+
+Username: mul.lightning
+
+Password: library
+------------------
+
+Twitter
+
+Username: miamiulibraries
+
+Password: sherl0ck
+------------------
+
+Visitor Log-in for Public Computers in King
+
+Username: ulb-visitor
+
+Password: library"
+Info Desk shift scheduling,"The G2 staff member for the Information Desk will collect availability at least 1 month prior to the beginning of a new semester or term (fall semester, winter break and J-term, spring semester and summer term), through email and/or a Google form. A schedule is created and posted by the G2 to the ULB-IS Schedules Google calendar, and announced via king-infodesk@listserv.miamioh.edu <mailto:king-infodesk@listserv.miamioh.edu>.
+
+Once a shift has been posted, the person scheduled is responsible for covering it. If coverage is needed, a request should be sent out to king-infodesk@listserv.miamioh.edu <mailto:king-infodesk@listserv.miamioh.edu>. When coverage is secured, an email should be sent to the G2, so the shift information can be updated on the calendar. "
+Why can't I stream videos while off campus?,"It is likely that the patron has exceeded the proxy server's transaction threshold due to a lot of off-campus searching. A proxy account is suspended automatically by the proxy server when users accessing library resources from off-campus hit a certain threshold of transactions. 
+
+Per contractual agreements with the publishers and vendors that we purchase databases and e-journals through, the Libraries have to monitor off-campus resource usage to ensure that systematic downloading isn't occurring (online sites like SciHub will use compromised Miami unique IDs and passwords to harvest database and journal content illegally). Our system is set up to automatically suspend users when it detects excessive systematic access. The suspensions clears automatically after 30 minutes.
+
+If the patron was searching multiple databases in multiple browser tabs, this may be why he/she hit the suspension threshold. I would recommend limiting the number of tabs or browser windows when searching library resources from off-campus. 
+
+If you experience this issue again, please note what specific databases or e-journals you were accessing when it happened and send that information to Jennifer Bazeley. That will help us to adjust suspension parameters going forward."
+I'm trying to search multiple EBSCO databases at once and it won't let me; how do I fix it?,"If you are using Chrome on a work computer:
+
+The issue is an extension called UBlock Origin, which is blocking the pop up window for the database.
+
+You need to go to the upper right corner of Chrome, locate the red shield icon, click on it, then turn off UBlock Origin for the site web-a-ebscohost-com.proxy.lib.­miamioh.edu <http://miamioh.edu/>.
+
+ 
+
+You can also try changing browsers and see if that helps."
+How / Where can I pay for library fines,"Bills for any Oxford campus library or for OhioLINK / SearchOhio at the Bursar's once the bill has been transferred to them (typically 30-60 days after they are initially issued). At the Bursar's Office, they can be paid for with cash, check, or credit card.
+
+Fines will block the patrons ability to check out or renew items. As of July 1, 2022, levels for blocking circulation privileges $300 (faculty) or $250 (students), or $100 (others)
+
+More questions about fines or bills? Transfer them to our billing specialist (Fines, Library) in LibAnswers or direct the patron to libfines@lib.miamioh.edu."
+REL 101,"REL 101 (Dr. Hillel Gray)
+ 
+Question: ""My professor has asked me to find primary sources written by religious Jews/Muslims/Christians/etc."" 
+ 
+Answer (per Katie Gibson):
+ 
+
+He's looking for things like memoirs, letters, sermons, diaries, etc. Here are a few suggestions:
+-Search the catalog for jew* and memoir (or letters)
+-Jews <http://www.lib.miamioh.edu/multifacet/books/%22Jews%22?field=subjects>--United States <http://www.lib.miamioh.edu/multifacet/books/%22Jews--United%20States%22?field=subjects>--Biography <http://www.lib.miamioh.edu/multifacet/books/%22Jews--United%20States--Biography%22?field=subjects> is a good subject heading, but since it covers biography and autobiography, make sure it is an autobiography the student chooses
+-Searching for the religion and an issue like women, immigration, etc with the word memoir might get you some useful books.
+-We don't have a ton of these sorts of things. Lane Library has quite a bit (lanepl.org <http://lanepl.org/>). Students can get a Lane card if they have a piece of mail with a local address."
+How can I access ClassWeb?,Miami's subscription allows for 9 simultaneous users and is IP authenticated. Click the link below to access.
+Google Scholar,"The Libraries web site tab for Google Scholar should activate link resolving and make subscribed resources available.  In the event this doesn't work (most likely for off-campus users), the following workaround is available:
+
+-Go straight to Google Scholar online (instead of through the library's website) at https://scholar.google.com <https://scholar.google.com/>.
+-Set up Library Links for Miami University:
+-After going to https://scholar.google.com <https://scholar.google.com/>, click the Menu icon in the top left next to ""Google Scholar"".
+-Click Settings.
+-Click Library Links.
+-Type Miami University into the search box and hit enter.
+-Check the box next to ""Miami University Libraries - Find It @MiamiOH"".
+-Click Save.
+
+
+
+
+This will allow patrons to see the ""Find it @MiamiOH"" link on Google Scholar search results even if they haven't authenticated through the library website, and should allow off campus access to full text."
+Do the Libraries provide access to textbooks?,"The Libraries purchase textbooks for the most heavily largest courses on campus IF they meet the following conditions:
+
+-The course must have a textbook listed with the Miami University Bookstore.
+-All sections of the course must use the SAME textbook or set of textbooks.
+-The textbooks do not  include items which require an individual sign-in unique to each copy of a textbook.
+
+
+These books may be checked out for two hours.
+
+To search available textbooks, type the title of the textbook or the course abbreviation (i.e., BUS 101) into the catalog search field."
+How can someone renew an Interlibrary Loan?,"Interlibrary loan renewals are at the discretion of the institution which has loaned the book. We can request a renewal if you check the request renewal checkbox in the ILLiad record for your request. It's hard to find, so you can also contact the Interlibrary Loan office at 513.529.6147 or mia-ill@lib.muohio.edu.
+
+PLEASE NOTE: Requests are rarely granted by loaning institutions after an item has become overdue."
+"How can I check on the status of a request? (Miami U, OhioLINK, SearchOhio)","Check the relevant catalog:
+
+-If the catalog status is Available, then the item has not yet been pulled from the shelf - it does NOT mean that the item is available to be picked up at a circulation desk.
+-If the catalog status is In Transit, the item has been pulled by the requesting library, but has not been received and placed on the hold shelf for the patron to pick up.
+
+
+If another status appears, or if there are other questions, any circulation supervisor can assist you."
+Information for new librarians,"Your supervisor will provide detailed information and training relevant to you in the first weeks and months of your new job, but in the meantime, this document  <https://docs.google.com/a/miamioh.edu/document/d/1ZxUFyHO_OscEo_l_ajcWe7mlwm-yXpzHl_xehwHrrPE/edit?usp=sharing>is a useful place to get started. Answers many general questions about the Libraries and University for new staff.
+
+The Professional Development Committee  <http://libguides.lib.miamioh.edu/ProfDev>LibGuide is also helpful in getting started."
+Journal impact factors,"Journal Impact Factors can be found in the Journal Citation Reports <http://www.lib.miamioh.edu/indexes/redirect/1271> databases. 
+
+Journal Impact Factor is the average number of times articles from the journal published in the past two years have been cited in the JCR year.  The impact factor is calculated by dividing the number of citations in the JCR year by the total number of citations of articles published in the two previous years. An impact factor of 1.0 means that, on average, the articles published one or two year ago have been cited one time. An impact factor of 2.5 means that, on average, the articles published one or two year ago have been cited two and a half times. Citing articles may be from the same journal; most citing articles are from different journals. The impact factor mitigates the importance of absolute citation frequencies. It tends to discount the advantage of large journals over small journals because large journals produce a larger body of citable literature. For the same reason, it tends to discount the advantage of frequently issued journals over less frequently issued ones and of older journals over newer ones. Because it offsets the advantages of size and age, it is a valuable tool for journal evaluation.
+
+General information about Journal Citation Reports and other research impact tools like Ulrich's, Cabell's, Google Scholar, and Publish or Perish can be found online at http://libguides.lib.miamioh.edu/dossier."
+JRN 201,"JRN 201
+
+Question: ""I'm looking for the front page of the New York Times from the day I was born.""
+
+Answer: Here's a video that walks you through step-by-step http://screencast.com/t/THiLp8RlJ"
+Leave reporting,"Leave reports are submitted here <https://docs.google.com/a/miamioh.edu/forms/d/e/1FAIpQLSdl_gOyHB7Q0EwX4O_wZGsMeJCJULofjUBmTvUBfPDNKj12vw/viewform> and are automatically posted to the ULB-IS Schedules calendar. Reports are also automatically emailed to the Department Head (Stacy Brinkman), Information Desk G2 (Megan Hart) and his/her supervisor (Jenny Presnell)."
+Emergency procedures,"Emergency Telephone Tree <https://docs.google.com/a/miamioh.edu/document/d/1oooUchx46pziu2JOahiRRh-dESntbshfh66cWkgAWKg/edit?usp=sharing>
+
+For Reference and Collection Services and all staff who work the Information Desk (including BEST librarians).
+
+Submit a Work Order <http://redmine.lib.miamioh.edu/>
+
+For non-emergency building issues or requests. Submitted to Samantha Brandenburg and Ross Mallaley.
+
+Immediate Action Guide <https://drive.google.com/file/d/0B1Ez6r16GW19U204SHBhbE5TdVk/view>
+
+A reference to be used in case of emergencies (e.g., natural disasters to active shooter incidents).
+------------------
+
+During business hours (8 am-5 pm), emergency problems with the building (i.e. overflowing toilets in the restroom) are reported immediately to the Dean's Office (513) 529-2800.
+
+After hours, report issues to Circulation department supervisor, who will call police dispatch. Police Dispatch will contact Building Services. If no one in Circulation is available, you can call the Police Dispatch yourself at (513) 529-2222.  "
+Opening procedure,"-Remove Hours sign from desk.
+-Turn off forwarding on both Information desk telephones, by pressing CFwdALL button. You will hear a single beep.
+-Log into staff workstation. 
+-Log into LibChat.
+-Check Pay4Print machines for any issues, such as posted out of order signage, error messages or low paper/toner."
+Reporting P4P problems to IT Services,"Problems with the ComDoc printers and VTS machines (that you are unable to solve through troubleshooting methods) should be reported promptly to Library Systems and IT Services through the following form: http://staff.lib.miamioh.edu/printproblems/printproblems.html.
+------------------
+
+All printer issues, resolved or otherwise, are also reported through the above form. Below is the link to view all printer issues submitted through the form: 
+
+https://docs.google.com/spreadsheets/d/1zROu4dWKkLMdR1-vS8qowWHIuMfGy0Nm5Kb1z69_s90/edit?ts=5817a568#gid=183914048
+------------------
+
+Problems with the public workstations (including software, hardware or otherwise), staff workstations and KIC scanners should be reported to the Library Systems department (the library's internal IT staff) by directly emailing systems@miamioh.edu <mailto:systems@miamioh.edu>."
+ComDoc staff contact information,"Brad McGuire (Service Technician)
+
+Phone: (513) 275-3710
+
+Cell: (513) 484-6941
+
+Email: bmcguire@comdoc.com   mcguirbk@miamioh.edu
+
+Address: 9270 Centre Pointe Dr. West Chester, OH 45069 (On-site office in King 5A)
+
+ 
+
+Jeff Eickelberger
+
+Phone: 513-410-3056
+
+Email: eickelj@miamioh.edu "
+Where can I find self-service e-resource usage statistics?,E-resources for many (but not all) of our e-resources are available on the Technical Services LibGuide E-Resource Usage Stats page (link below).
+Is there a list of available cataloging resources?,"See the External Resources box on the Technical Services LibGuide at the link below. Includes links to catalogs, cataloging resources, databases, and the Technical Services PBWiki (procedures)."
+King Library Mailing Address to Return Books," 
+King Library Circulation
+151 South Campus Avenue
+Oxford OH 45056
+ 
+Even though the books will make it to the library through the mail, they will not be removed from the patrons record until the building re-opens and we can check them in. "
+Need to Renew NY Times access but currently Off Campus,"For now, the ONLY way apparently that NY Times access can be renewed for students and faculty that are off campus is that we must ask them for their email and NY Times password and then we can renew their account for them, (assuming we are on campus ourselves).
+
+I have asked the NY Times to try and come up with some better work around but that is probably unlikely to happen anytime soon.
+
+Susan"
+How do I find / make an appointment with a Notary,"We currently have a Notaries Public, who are available from 9 - 5 each day with some weeknights. 
+ 
+Because we are occasionally away from the office due to meal breaks, meetings, etc., people may want to make an appointment ahead of time (witherre@miamioh.edu), or contact the Circulation Desk (513.529.4141) to check on same-day availability.
+ 
+If people are already in King Library, we are happy to assist walk-in requests at the Front Desk if we are not away from the department."
+How many books do the Miami University Libraries have?,"At the time the Libraries completed the 2019 ACRL Survey, the Libraries held:
+
+- 1,278.669 unique titles in   1,436,779 volumes
+- 727,667 e-books
+- 46,100 physical media items
+- 38,773 digital media items"
+"While downloading articles, I received a message saying that I have been temporarily blocked for making too many requests. What gives?","Our off campus authentication system is set up to block users who download very large files in order to prevent accounts that may be compromised from illegally using our licensed content. Sometimes the system mistakenly blocks legit users, also.  The suspensions automatically lift after 15 minutes, so usually by the time we're alerted to the problem the suspension has expired. "
+Can faculty place personally-owned copies of books on reserve?,"The Libraries will affix a barcode, reserve labels, and theft detection devices to personal copies provided to us for reserve. Personal materials are returned to you through campus mail unless otherwise indicated. The library is not responsible for the loss of, or damage to, personal copies.
+
+Fill out a Reserve Request Form and deliver materials to be placed on reserve to a Circulation desk for processing. You may use our web-based request form <http://www.lib.miamioh.edu/reserve-request-form>.
+
+The week before and the first week of Fall and Spring semesters are busy times. To ensure that materials are available for students when needed, at the start of each semester allow one week for library staff to process materials for reserves. At other times, please allow 2 working days.
+
+Loan periods for course materials are chosen by the instructor. Options are 2 hour checkouts (For Use in the Library only); 1-day or 3-days
+
+All personal materials are removed at the end of every semester. Any materials donated to the Libraries are returned to the circulating collection.
+
+ "
+How can faculty place library owned items on reserve?,"Fill out a Reserve Request Form and deliver materials to be placed on reserve to a Circulation desk for processing. You may use our web-based request form <http://www.lib.miamioh.edu/reserve-request-form>.
+
+The week before and the first week of Fall and Spring semesters are busy times. To ensure that materials are available for students when needed, at the start of each semester allow one week for library staff to process materials for reserves. At other times, please allow 2 working days.
+
+Loan periods for course materials are chosen by the instructor. Options are 2 hour checkouts (For Use in the Library only); 1-day or 3-days.
+
+For more information:
+
+-King Library: kingreserves@miamioh.edu
+-Art & Architecture Library: aareserves@miamioh.edu
+-Music Library: musicreserves@miamioh.edu"
+How do we request an accessible version of library materials?,"The library materials conversion request form can be found in the library website's staff area under ""documents and forms"" or directly from this link: https://miamioh.qualtrics.com/jfe/form/SV_6MtkeYgCKQW4Oh0 <https://miamioh.formstack.com/forms/conversion_request>"
+Which Library films and videos have public performance rights?,"The Libraries own VHS tapes, DVDs and laserdiscs, some of which may include public performance rights. Please contact Karen Clift <mailto:cliftks@miamioh.edu?subject=Film%20PPR> to determine if the library purchased public performance rights for an individual title.
+
+-Library-owned films on DVD, laserdisc, and VHS DO NOT include public performance rights UNLESS you see a note in the catalog record that states otherwise.
+-Showing library-owned films outside of the classroom without public performance rights may be illegal.
+-If the library did not purchase public performance rights, it is the responsibility of the individual or organization intending to publicly screen the film to secure public performance rights.
+-Acquisitions and cataloging staff maintain a list of public performance rights by producer/distributor <http://publicperformancerights.pbworks.com/w/page/30539346/FrontPage>.
+
+
+Streaming videos available to faculty, staff, and students may also be found by searching the title of the video in the Books & More <http://proxy.lib.miamioh.edu/login?url=http://search.ebscohost.com/login.aspx?authtype=ip&profile=eds_cat> tab on the Libraries' website. 
+
+You may also browse streaming videos in the following databases:
+
+Alexander Street Press <http://www.lib.miamioh.edu/indexes/redirect/905>
+
+OhioLINK Educational and Instructional Videos <http://www.lib.miamioh.edu/indexes/redirect/282>
+
+Films in the streaming databases above include public performance rights as long as no admission fee is charged."
+Gifts in Kind Policy,"The Miami University Libraries welcomes the donation of gifts-in-kind not already in library collections in the following categories:
+
+-Hardback or trade paperback books in good to excellent condition
+-CDs and DVDs in good playable condition in their original cases
+
+
+Because of reduced staff we cannot accept the following:
+
+-Mass-market paperbacks
+-Textbooks more than 2 years old
+-Journal articles, issues or volumes*
+-Folders, binders
+-Theses, dissertations
+-VHS or audio cassette tapes
+-Vinyl records (33 (LP), 45 or 78 rpm)
+-Mildewed or musty materials of any type
+
+
+All donations of gifts-in-kind are accepted with the understanding that the Libraries will retain only those materials that meet our collection needs. These decisions are made at the discretion of the subject librarian.
+
+The Libraries cannot assist in packing or transporting donated materials. On campus, the donor’s department may contact the trucking crew to arrange transportation of large collections. Off campus, the donor should arrange transportation to the King Library shipping room door (off the drive between King Library and McGuffey Hall). Please contact the Libraries about your gift before arranging for delivery.
+
+If you wish to claim a donation as a tax deduction, please be aware that the Libraries are not permitted to provide any appraisal or value estimate. The donor is responsible for following IRS rules. Once accepted, donations become the property of Miami University and cannot be returned to donors.
+
+Donors who believe their materials are of special value or of historical significance should contact Walter Havighurst Special Collections (513 529-3323).
+
+For further information or to discuss your gift plans, please contact Library Acquisitions, 513 529-2886.
+
+Thank you for your cooperation and support of the Miami University Libraries.
+
+*The Libraries currently provide most journals in an electronic format. A complete run of a print journal not available online will be considered as an exception.
+
+Last Updated: 5/29/2012"
+LAS 208,"LAS 208
+
+Question: ""I need to find travel writing written by a person originally from outside of the region they're writing about, within a particular time period.""
+
+Answer (per Katie Gibson): 
+-Pick a country or region (Central America, South America, Caribbean). Latin America is too general of a term.
+-Add the phrase ""description and travel"" to the search terms.
+-Narrow your search results by date to your time period 
+OR 
+If that does not find results, go back to the full results list. Some books were written two hundred years ago but republished recently. When you narrow the results by date, these will be removed from the list.
+-Make sure the book is not a guide for travelers, but rather a book by someone talking about their trip to the country. 
+-
+You can also direct them to me or to the research guide I made for the assignment. 
+http://libguides.lib.miamioh.edu/las/LAS208"
+Closing procedures,"-Log out of staff workstation. 
+-Forward both telephones to Circulation by pressing CFwdALL followed by 92433.
+-Post Hours sign on desk."
+Procedures for print outages,"Sometimes all print services in the library go down. This can mean that nothing is showing up in the print queue. It could also mean that students are unable to swipe and pay for their print job.
+
+Before concluding that all services are down, please troubleshoot the issue for yourself. Send a test print job. Try to replicate the problem before assuming that something is simply broken. 
+
+If services are down, and after reporting the issue to Library Systems and IT Services through the form <http://staff.lib.miamioh.edu/printproblems/printproblems.html>, please adhere to the following procedures: 
+-Hang out of order signs on ALL affected printers and/or VTS machines. 
+-Print for patrons on staff printers, at no cost, using ULB-KNG101-M401dne (the Information Desk printer) or ULB-KNG101-ir-C5035 (the Circulation Desk printer).
+-Please do not handle all free print requests yourself, especially if a long line is forming. Once you're helping 1-2 patrons, direct other patrons to the Information Desk and Circulation Desk. "
+P4P instructions,How to print <http://www.lib.miamioh.edu/how_to_print>: MU Libraries webpage detailing wireless and public printing in the Libraries.
+Manager cards,"The Information desk manager card carries a balance of up to $100, which can be used to pay for a patron's print job under certain circumstances (ex: a P4P machine malfunctioned and a reprint of the job is necessary). When the card balance reaches $50 or below, contact Sherri Bowling or Brian Woodruff in the HOME office for a refill. 
+
+New manager cards can be requested following the directions located in this <http://miamioh.teamdynamix.com/TDClient/Requests/ServiceDet?ID=8768> IT Help Knowledge Base case."

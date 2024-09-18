@@ -21,7 +21,7 @@ export default function References({ response } : {
                     response.objects.map((result) => (
                         <ol >
                             <li className="space-y-4">
-                                <a className="underline" href="result.properties.url" target="_blank"> {result.properties.title} </a>
+                                <a className="underline" href="/" target="_blank"> {result.properties.question} </a>
                             </li>
                         </ol>
                     ))

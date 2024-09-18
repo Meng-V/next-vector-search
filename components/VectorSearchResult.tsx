@@ -23,11 +23,11 @@ export default function VectorSearchResult({ response }: {
                         {
                             response.objects.map((result) => (
                                 <div key={result.uuid} className="space-y-4 p-2">
-                                    <a className="font-bold text-xl pt-2 pb-2 underline" href={result.properties.url}>
-                                        {result.properties.title}
+                                    <a className="font-bold text-xl pt-2 pb-2 underline" href="/">
+                                        {result.properties.question}
                                     </a>
                                     <h3 className="-translate-y-2 w-full">
-                                        {result.properties.text}
+                                        {result.properties.answer}
                                     </h3>
                                 </div>
                             ))
