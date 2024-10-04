@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import React from 'react';
 import { Noto_Serif, Inter } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className=" overflow-x-hidden" lang="en">
+    <html className="overflow-x-hidden" lang="en">
       <body className={`${inter.className} ${noto_serif.variable}`}>
         {children}
       </body>

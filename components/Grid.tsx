@@ -7,7 +7,7 @@ export default function Grid({children} :
     { children: ReactNode }) {
 
     return (
-       <div className="grid grid-cols-3">
+       <div className="grid grid-cols-3 gap-y-2">
         {children}
        </div>
     )

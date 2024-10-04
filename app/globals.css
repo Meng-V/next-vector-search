@@ -33,3 +33,7 @@
 ::selection {
   background: #a0ffa4;
 }
+
+*:link {
+  color: #ff00ff;
+}

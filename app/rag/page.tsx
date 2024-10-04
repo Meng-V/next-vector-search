@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
 import Image from "next/image";
 
 import RAGResult from "../../components/RAGResult.tsx";
 import Header from "../../components/Header.tsx";
 
 export default async function Home() {
-
   return (
-    <div>
-      <main>
-        <div className="items-center justify-center flex pt-12">
+      <main className="h-[90vh]">
+        <div className="z-10 justify-center flex pt-12">
           <Image
             className="w-48"
             src="/logo.png"
@@ -18,9 +16,8 @@ export default async function Home() {
             width={360}
           />
         </div>
-        <Header text={"RAG with Weaviate"}/>
+        <Header text={"Search FAQs within the Libraries"} />
         <RAGResult />
       </main>
-    </div>
   );
 }
